@@ -21,7 +21,7 @@ namespace MUSCAttendance.Pages.Students
         }
 
         public string NameSort { get; set; }
-        public string AgeSort { get; set; }
+        public string AttendanceSort { get; set; }
         public string DateSort { get; set; }
 
         public string CurrentFilter { get; set; }
@@ -34,7 +34,7 @@ namespace MUSCAttendance.Pages.Students
         {
             CurrentSort = sortOrder;
             NameSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            AgeSort = sortOrder == "Age" ? "age_desc" : "Age";
+            AttendanceSort = sortOrder == "TotalAttendances" ? "age_desc" : "TotalAttendances";
             DateSort = sortOrder == "Date" ? "date_desc" : "Date";
             if (searchString != null)
             {
@@ -60,16 +60,16 @@ namespace MUSCAttendance.Pages.Students
                     studentsIQ = studentsIQ.OrderByDescending(s => s.LastName);
                     break;
                 case "age_desc":
-                    studentsIQ = studentsIQ.OrderByDescending(s => s.Age);
+                    studentsIQ = studentsIQ.OrderByDescending(s => s.TotalAttendances);
                     break;
-                case "Age":
-                    studentsIQ = studentsIQ.OrderByDescending(s => s.Age);
+                case "TotalAttendances":
+                    studentsIQ = studentsIQ.OrderByDescending(s => s.TotalAttendances);
                     break;
                 case "Date":
-                    studentsIQ = studentsIQ.OrderBy(s => s.EnrollmentDate);
+                    studentsIQ = studentsIQ.OrderBy(s => s.GraduationYear);
                     break;
                 case "date_desc":
-                    studentsIQ = studentsIQ.OrderByDescending(s => s.EnrollmentDate);
+                    studentsIQ = studentsIQ.OrderByDescending(s => s.GraduationYear);
                     break;
                 
                 default:

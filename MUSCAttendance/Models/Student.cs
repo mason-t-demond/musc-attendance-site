@@ -18,13 +18,17 @@ namespace MUSCAttendance.Models
         [Display(Name = "First Name")]
         public string FirstMidName { get; set; }
 
+
         [Required]
-        [Display(Name = "Age")]
-        public int Age{ get; set; }
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        [Display(Name = "Enrollment Date")]
-        public DateTime EnrollmentDate { get; set; }
+        [Display(Name = "Graduation Year")]
+        public int GraduationYear { get; set; }
+
+        [Required]
+        [Display(Name = "Total Attendances")]
+        public int TotalAttendances{ get; set; }
+
+
+
         [Display(Name = "Full Name")]
         public string FullName
         {
@@ -34,6 +38,6 @@ namespace MUSCAttendance.Models
             }
         }
 
-        public ICollection<Enrollment> Enrollments { get; set; }
+        public ICollection<Attendance> Attendances { get; set; }
     }
 }

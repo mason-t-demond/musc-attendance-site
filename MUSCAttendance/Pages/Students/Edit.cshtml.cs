@@ -51,7 +51,7 @@ public async Task<IActionResult> OnPostAsync(int id)
     if (await TryUpdateModelAsync<Student>(
         studentToUpdate,
         "student",
-        s => s.FirstMidName, s => s.LastName, s => s.Age, s => s.EnrollmentDate))
+        s => s.FirstMidName, s => s.LastName, s => s.GraduationYear, s => s.TotalAttendances))
     {
         await _context.SaveChangesAsync();
         return RedirectToPage("./Index");

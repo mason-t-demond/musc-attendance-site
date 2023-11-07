@@ -87,7 +87,7 @@ namespace MUSCAttendance.Migrations
                     b.ToTable("Departments");
                 });
 
-            modelBuilder.Entity("MUSCAttendance.Models.Enrollment", b =>
+            modelBuilder.Entity("MUSCAttendance.Models.Attendance", b =>
                 {
                     b.Property<int>("EnrollmentID")
                         .ValueGeneratedOnAdd()
@@ -96,7 +96,7 @@ namespace MUSCAttendance.Migrations
                     b.Property<int>("CourseID")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("Grade")
+                    b.Property<int?>("EventType")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("StudentID")
@@ -108,7 +108,7 @@ namespace MUSCAttendance.Migrations
 
                     b.HasIndex("StudentID");
 
-                    b.ToTable("Enrollments");
+                    b.ToTable("Attendances");
                 });
 
             modelBuilder.Entity("MUSCAttendance.Models.Instructor", b =>
@@ -156,10 +156,10 @@ namespace MUSCAttendance.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Age")
+                    b.Property<int>("TotalAttendances")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("EnrollmentDate")
+                    b.Property<DateTime>("GraduationYear")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FirstMidName")
@@ -213,16 +213,16 @@ namespace MUSCAttendance.Migrations
                     b.Navigation("Administrator");
                 });
 
-            modelBuilder.Entity("MUSCAttendance.Models.Enrollment", b =>
+            modelBuilder.Entity("MUSCAttendance.Models.Attendance", b =>
                 {
                     b.HasOne("MUSCAttendance.Models.Course", "Course")
-                        .WithMany("Enrollments")
+                        .WithMany("Attendances")
                         .HasForeignKey("CourseID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("MUSCAttendance.Models.Student", "Student")
-                        .WithMany("Enrollments")
+                        .WithMany("Attendances")
                         .HasForeignKey("StudentID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -245,7 +245,7 @@ namespace MUSCAttendance.Migrations
 
             modelBuilder.Entity("MUSCAttendance.Models.Course", b =>
                 {
-                    b.Navigation("Enrollments");
+                    b.Navigation("Attendances");
                 });
 
             modelBuilder.Entity("MUSCAttendance.Models.Department", b =>
@@ -260,7 +260,7 @@ namespace MUSCAttendance.Migrations
 
             modelBuilder.Entity("MUSCAttendance.Models.Student", b =>
                 {
-                    b.Navigation("Enrollments");
+                    b.Navigation("Attendances");
                 });
 #pragma warning restore 612, 618
         }

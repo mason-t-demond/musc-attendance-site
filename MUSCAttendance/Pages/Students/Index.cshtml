@@ -35,17 +35,18 @@
                 @Html.DisplayNameFor(model => model.Students[0].FirstMidName)
             </th>
             <th>
-            <a asp-page="./Index" asp-route-sortOrder="@Model.AgeSort"
-               asp-route-currentFilter="@Model.CurrentFilter">
-                @Html.DisplayNameFor(model => model.Students[0].Age)                
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Students[0].GraduationYear)
                 </a>         
             </th>
             <th>
-                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort"
-                   asp-route-currentFilter="@Model.CurrentFilter">
-                    @Html.DisplayNameFor(model => model.Students[0].EnrollmentDate)
+            <a asp-page="./Index" asp-route-sortOrder="@Model.AttendanceSort"
+               asp-route-currentFilter="@Model.CurrentFilter">
+                @Html.DisplayNameFor(model => model.Students[0].TotalAttendances)                
                 </a>         
             </th>
+            
              
             <th></th>
         </tr>
@@ -61,11 +62,12 @@
                 @Html.DisplayFor(modelItem => item.FirstMidName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Age)
+                @Html.DisplayFor(modelItem => item.GraduationYear)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                @Html.DisplayFor(modelItem => item.TotalAttendances)
             </td>
+            
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |

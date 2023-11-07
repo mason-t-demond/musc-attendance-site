@@ -19,7 +19,7 @@ namespace MUSCAttendance.Models
         public int DepartmentID { get; set; }
 
         public Department Department { get; set; }
-        public ICollection<Enrollment> Enrollments { get; set; }
+        public ICollection<Attendance> Attendances { get; set; }
         public ICollection<Instructor> Instructors { get; set; }
     }
 }

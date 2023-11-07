@@ -34,8 +34,8 @@ namespace MUSCAttendance.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     LastName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     FirstName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    Age = table.Column<int>(type: "INTEGER", nullable: false),
-                    EnrollmentDate = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    TotalAttendances = table.Column<int>(type: "INTEGER", nullable: false),
+                    GraduationYear = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -126,14 +126,14 @@ namespace MUSCAttendance.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Enrollments",
+                name: "Attendances",
                 columns: table => new
                 {
                     EnrollmentID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     CourseID = table.Column<int>(type: "INTEGER", nullable: false),
                     StudentID = table.Column<int>(type: "INTEGER", nullable: false),
-                    Grade = table.Column<int>(type: "INTEGER", nullable: true)
+                    EventType = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -169,12 +169,12 @@ namespace MUSCAttendance.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_Enrollments_CourseID",
-                table: "Enrollments",
+                table: "Attendances",
                 column: "CourseID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Enrollments_StudentID",
-                table: "Enrollments",
+                table: "Attendances",
                 column: "StudentID");
         }
 
@@ -185,7 +185,7 @@ namespace MUSCAttendance.Migrations
                 name: "CourseInstructor");
 
             migrationBuilder.DropTable(
-                name: "Enrollments");
+                name: "Attendances");
 
             migrationBuilder.DropTable(
                 name: "OfficeAssignments");

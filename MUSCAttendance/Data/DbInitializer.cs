@@ -19,56 +19,56 @@ namespace MUSCAttendance.Data
             {
                 FirstMidName = "Carson",
                 LastName = "Alexander",
-                EnrollmentDate = DateTime.Parse("2016-09-01")
+                GraduationYear = 2026
             };
 
             var alonso = new Student
             {
                 FirstMidName = "Meredith",
                 LastName = "Alonso",
-                EnrollmentDate = DateTime.Parse("2018-09-01")
+                GraduationYear = 2026
             };
 
             var anand = new Student
             {
                 FirstMidName = "Arturo",
                 LastName = "Anand",
-                EnrollmentDate = DateTime.Parse("2019-09-01")
+                GraduationYear = 2026
             };
 
             var barzdukas = new Student
             {
                 FirstMidName = "Gytis",
                 LastName = "Barzdukas",
-                EnrollmentDate = DateTime.Parse("2018-09-01")
+                GraduationYear = 2026
             };
 
             var li = new Student
             {
                 FirstMidName = "Yan",
                 LastName = "Li",
-                EnrollmentDate = DateTime.Parse("2018-09-01")
+                GraduationYear = 2026
             };
 
             var justice = new Student
             {
                 FirstMidName = "Peggy",
                 LastName = "Justice",
-                EnrollmentDate = DateTime.Parse("2017-09-01")
+                GraduationYear = 2026
             };
 
             var norman = new Student
             {
                 FirstMidName = "Laura",
                 LastName = "Norman",
-                EnrollmentDate = DateTime.Parse("2019-09-01")
+                GraduationYear = 2026
             };
 
             var olivetto = new Student
             {
                 FirstMidName = "Nino",
                 LastName = "Olivetto",
-                EnrollmentDate = DateTime.Parse("2011-09-01")
+                GraduationYear = 2026
             };
 
             var students = new Student[]
@@ -264,65 +264,65 @@ namespace MUSCAttendance.Data
 
             context.AddRange(courses);
 
-            var enrollments = new Enrollment[]
+            var Attendances = new Attendance[]
             {
-                new Enrollment {
+                new Attendance {
                     Student = alexander,
                     Course = chemistry,
-                    Grade = Grade.A
+                    EventType = EventType.A
                 },
-                new Enrollment {
+                new Attendance {
                     Student = alexander,
                     Course = microeconomics,
-                    Grade = Grade.C
+                    EventType = EventType.C
                 },
-                new Enrollment {
+                new Attendance {
                     Student = alexander,
                     Course = macroeconmics,
-                    Grade = Grade.B
+                    EventType = EventType.B
                 },
-                new Enrollment {
+                new Attendance {
                     Student = alonso,
                     Course = calculus,
-                    Grade = Grade.B
+                    EventType = EventType.B
                 },
-                new Enrollment {
+                new Attendance {
                     Student = alonso,
                     Course = trigonometry,
-                    Grade = Grade.B
+                    EventType = EventType.B
                 },
-                new Enrollment {
+                new Attendance {
                     Student = alonso,
                     Course = composition,
-                    Grade = Grade.B
+                    EventType = EventType.B
                 },
-                new Enrollment {
+                new Attendance {
                     Student = anand,
                     Course = chemistry
                 },
-                new Enrollment {
+                new Attendance {
                     Student = anand,
                     Course = microeconomics,
-                    Grade = Grade.B
+                    EventType = EventType.B
                 },
-                new Enrollment {
+                new Attendance {
                     Student = barzdukas,
                     Course = chemistry,
-                    Grade = Grade.B
+                    EventType = EventType.B
                 },
-                new Enrollment {
+                new Attendance {
                     Student = li,
                     Course = composition,
-                    Grade = Grade.B
+                    EventType = EventType.B
                 },
-                new Enrollment {
+                new Attendance {
                     Student = justice,
                     Course = literature,
-                    Grade = Grade.B
+                    EventType = EventType.B
                 }
             };
 
-            context.AddRange(enrollments);
+            context.AddRange(Attendances);
             context.SaveChanges();
         }
     }
