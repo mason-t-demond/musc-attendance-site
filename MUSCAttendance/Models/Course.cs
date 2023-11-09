@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MUSCAttendance.Models
 {
     public enum EventType {
-        Hendrix, UCA, Other
+        Hendrix, UCA, Other, A, B, C, D, F
     }
 
     public class Course
@@ -32,6 +32,6 @@ namespace MUSCAttendance.Models
 
         public ICollection<Instructor> Instructors { get; set; }
         public Department Department { get; set; }
-        public ICollection<Enrollment> Enrollments { get; set; }
+        public ICollection<Attendance> Attendances { get; set; }
     }
 }

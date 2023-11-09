@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MUSCAttendance.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20231109012040_InitialCreate")]
+    [Migration("20231109025017_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -33,6 +33,30 @@ namespace MUSCAttendance.Migrations
                     b.HasIndex("InstructorsID");
 
                     b.ToTable("CourseInstructor");
+                });
+
+            modelBuilder.Entity("MUSCAttendance.Models.Attendance", b =>
+                {
+                    b.Property<int>("AttendanceID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CourseID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("EventType")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("StudentID")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("AttendanceID");
+
+                    b.HasIndex("CourseID");
+
+                    b.HasIndex("StudentID");
+
+                    b.ToTable("Attendances");
                 });
 
             modelBuilder.Entity("MUSCAttendance.Models.Course", b =>
@@ -97,30 +121,6 @@ namespace MUSCAttendance.Migrations
                     b.ToTable("Departments");
                 });
 
-            modelBuilder.Entity("MUSCAttendance.Models.Attendance", b =>
-                {
-                    b.Property<int>("EnrollmentID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("CourseID")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("EventType")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("StudentID")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("EnrollmentID");
-
-                    b.HasIndex("CourseID");
-
-                    b.HasIndex("StudentID");
-
-                    b.ToTable("Attendances");
-                });
-
             modelBuilder.Entity("MUSCAttendance.Models.Instructor", b =>
                 {
                     b.Property<int>("ID")
@@ -166,22 +166,22 @@ namespace MUSCAttendance.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("TotalAttendances")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("GraduationYear")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("FirstMidName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT")
                         .HasColumnName("FirstName");
 
+                    b.Property<int>("GraduationYear")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("TotalAttendances")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("ID");
 
@@ -203,6 +203,25 @@ namespace MUSCAttendance.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("MUSCAttendance.Models.Attendance", b =>
+                {
+                    b.HasOne("MUSCAttendance.Models.Course", "Course")
+                        .WithMany("Attendances")
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MUSCAttendance.Models.Student", "Student")
+                        .WithMany("Attendances")
+                        .HasForeignKey("StudentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("Student");
+                });
+
             modelBuilder.Entity("MUSCAttendance.Models.Course", b =>
                 {
                     b.HasOne("MUSCAttendance.Models.Department", "Department")
@@ -221,25 +240,6 @@ namespace MUSCAttendance.Migrations
                         .HasForeignKey("InstructorID");
 
                     b.Navigation("Administrator");
-                });
-
-            modelBuilder.Entity("MUSCAttendance.Models.Attendance", b =>
-                {
-                    b.HasOne("MUSCAttendance.Models.Course", "Course")
-                        .WithMany("Attendances")
-                        .HasForeignKey("CourseID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MUSCAttendance.Models.Student", "Student")
-                        .WithMany("Attendances")
-                        .HasForeignKey("StudentID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Course");
-
-                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("MUSCAttendance.Models.OfficeAssignment", b =>

@@ -3,11 +3,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MUSCAttendance.Models
 {
-    public enum EventType
-    {
-        HDX, UCA, Other,A,B,C,D,E,F
-    }
-
     public class Attendance
     {
         public int AttendanceID { get; set; }

@@ -34,8 +34,8 @@ namespace MUSCAttendance.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     LastName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     FirstName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    TotalAttendances = table.Column<int>(type: "INTEGER", nullable: false),
-                    GraduationYear = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    GraduationYear = table.Column<int>(type: "INTEGER", nullable: false),
+                    TotalAttendances = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -107,6 +107,33 @@ namespace MUSCAttendance.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Attendances",
+                columns: table => new
+                {
+                    AttendanceID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    CourseID = table.Column<int>(type: "INTEGER", nullable: false),
+                    StudentID = table.Column<int>(type: "INTEGER", nullable: false),
+                    EventType = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Attendances", x => x.AttendanceID);
+                    table.ForeignKey(
+                        name: "FK_Attendances_Course_CourseID",
+                        column: x => x.CourseID,
+                        principalTable: "Course",
+                        principalColumn: "CourseID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Attendances_Student_StudentID",
+                        column: x => x.StudentID,
+                        principalTable: "Student",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "CourseInstructor",
                 columns: table => new
                 {
@@ -130,32 +157,15 @@ namespace MUSCAttendance.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Attendances",
-                columns: table => new
-                {
-                    EnrollmentID = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    CourseID = table.Column<int>(type: "INTEGER", nullable: false),
-                    StudentID = table.Column<int>(type: "INTEGER", nullable: false),
-                    EventType = table.Column<int>(type: "INTEGER", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Enrollments", x => x.EnrollmentID);
-                    table.ForeignKey(
-                        name: "FK_Enrollments_Course_CourseID",
-                        column: x => x.CourseID,
-                        principalTable: "Course",
-                        principalColumn: "CourseID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Enrollments_Student_StudentID",
-                        column: x => x.StudentID,
-                        principalTable: "Student",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                });
+            migrationBuilder.CreateIndex(
+                name: "IX_Attendances_CourseID",
+                table: "Attendances",
+                column: "CourseID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Attendances_StudentID",
+                table: "Attendances",
+                column: "StudentID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Course_DepartmentID",
@@ -171,35 +181,25 @@ namespace MUSCAttendance.Migrations
                 name: "IX_Departments_InstructorID",
                 table: "Departments",
                 column: "InstructorID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Enrollments_CourseID",
-                table: "Attendances",
-                column: "CourseID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Enrollments_StudentID",
-                table: "Attendances",
-                column: "StudentID");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CourseInstructor");
+                name: "Attendances");
 
             migrationBuilder.DropTable(
-                name: "Attendances");
+                name: "CourseInstructor");
 
             migrationBuilder.DropTable(
                 name: "OfficeAssignments");
 
             migrationBuilder.DropTable(
-                name: "Course");
+                name: "Student");
 
             migrationBuilder.DropTable(
-                name: "Student");
+                name: "Course");
 
             migrationBuilder.DropTable(
                 name: "Departments");
