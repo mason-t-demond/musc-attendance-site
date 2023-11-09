@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MUSCAttendance.Models
 {
     public enum EventType {
-        Hendrix, UCA, Other, A, B, C, D, F
+        Hendrix, UCA, Other
     }
 
     public class Course
@@ -20,7 +20,7 @@ namespace MUSCAttendance.Models
         [DataType(DataType.Date)]
         [Display(Name = "Date of Event")]
         public DateTime EventDate { get; set; }
-
+        [Display(Name = "Location")]
         public EventType Type { get; set; }
 
         public string Description { get; set; }

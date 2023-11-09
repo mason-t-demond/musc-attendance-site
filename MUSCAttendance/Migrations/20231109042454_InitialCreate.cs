@@ -93,7 +93,8 @@ namespace MUSCAttendance.Migrations
                     Type = table.Column<int>(type: "INTEGER", nullable: false),
                     Description = table.Column<string>(type: "TEXT", nullable: true),
                     Performed = table.Column<string>(type: "TEXT", nullable: true),
-                    DepartmentID = table.Column<int>(type: "INTEGER", nullable: false)
+                    DepartmentID = table.Column<int>(type: "INTEGER", nullable: false),
+                    StudentID = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -104,6 +105,11 @@ namespace MUSCAttendance.Migrations
                         principalTable: "Departments",
                         principalColumn: "DepartmentID",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Course_Student_StudentID",
+                        column: x => x.StudentID,
+                        principalTable: "Student",
+                        principalColumn: "ID");
                 });
 
             migrationBuilder.CreateTable(
@@ -173,6 +179,11 @@ namespace MUSCAttendance.Migrations
                 column: "DepartmentID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Course_StudentID",
+                table: "Course",
+                column: "StudentID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_CourseInstructor_InstructorsID",
                 table: "CourseInstructor",
                 column: "InstructorsID");
@@ -196,13 +207,13 @@ namespace MUSCAttendance.Migrations
                 name: "OfficeAssignments");
 
             migrationBuilder.DropTable(
-                name: "Student");
-
-            migrationBuilder.DropTable(
                 name: "Course");
 
             migrationBuilder.DropTable(
                 name: "Departments");
+
+            migrationBuilder.DropTable(
+                name: "Student");
 
             migrationBuilder.DropTable(
                 name: "Instructor");

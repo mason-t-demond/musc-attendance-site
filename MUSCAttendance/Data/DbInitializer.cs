@@ -1,6 +1,8 @@
 using MUSCAttendance.Models;
+using MUSCAttendance.Pages.Courses;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace MUSCAttendance.Data
@@ -14,76 +16,6 @@ namespace MUSCAttendance.Data
             {
                 return;   // DB has been seeded
             }
-
-            var alexander = new Student
-            {
-                FirstMidName = "Carson",
-                LastName = "Alexander",
-                GraduationYear = 2026
-            };
-
-            var alonso = new Student
-            {
-                FirstMidName = "Meredith",
-                LastName = "Alonso",
-                GraduationYear = 2026
-            };
-
-            var anand = new Student
-            {
-                FirstMidName = "Arturo",
-                LastName = "Anand",
-                GraduationYear = 2026
-            };
-
-            var barzdukas = new Student
-            {
-                FirstMidName = "Gytis",
-                LastName = "Barzdukas",
-                GraduationYear = 2026
-            };
-
-            var li = new Student
-            {
-                FirstMidName = "Yan",
-                LastName = "Li",
-                GraduationYear = 2026
-            };
-
-            var justice = new Student
-            {
-                FirstMidName = "Peggy",
-                LastName = "Justice",
-                GraduationYear = 2026
-            };
-
-            var norman = new Student
-            {
-                FirstMidName = "Laura",
-                LastName = "Norman",
-                GraduationYear = 2026
-            };
-
-            var olivetto = new Student
-            {
-                FirstMidName = "Nino",
-                LastName = "Olivetto",
-                GraduationYear = 2026
-            };
-
-            var students = new Student[]
-            {
-                alexander,
-                alonso,
-                anand,
-                barzdukas,
-                li,
-                justice,
-                norman,
-                olivetto
-            };
-
-            context.AddRange(students);
 
             var abercrombie = new Instructor
             {
@@ -278,61 +210,140 @@ namespace MUSCAttendance.Data
 
             context.AddRange(courses);
 
+            var alexander = new Student
+            {
+                FirstMidName = "Carson",
+                LastName = "Alexander",
+                GraduationYear = 2026,
+                TotalAttendances = 3
+            };
+
+            var alonso = new Student
+            {
+                FirstMidName = "Meredith",
+                LastName = "Alonso",
+                GraduationYear = 2026,
+                TotalAttendances = 3
+            };
+
+            var anand = new Student
+            {
+                FirstMidName = "Arturo",
+                LastName = "Anand",
+                GraduationYear = 2026,
+                TotalAttendances = 2
+            };
+
+            var barzdukas = new Student
+            {
+                FirstMidName = "Gytis",
+                LastName = "Barzdukas",
+                GraduationYear = 2026,
+                TotalAttendances = 1
+            };
+
+            var li = new Student
+            {
+                FirstMidName = "Yan",
+                LastName = "Li",
+                GraduationYear = 2026,
+                TotalAttendances = 1
+            };
+
+            var justice = new Student
+            {
+                FirstMidName = "Peggy",
+                LastName = "Justice",
+                GraduationYear = 2026,
+                TotalAttendances = 1
+            };
+
+            var norman = new Student
+            {
+                FirstMidName = "Laura",
+                LastName = "Norman",
+                GraduationYear = 2026,
+                TotalAttendances = 0
+            };
+
+            var olivetto = new Student
+            {
+                FirstMidName = "Nino",
+                LastName = "Olivetto",
+                GraduationYear = 2026,
+                TotalAttendances = 0
+            };
+
+            var students = new Student[]
+            {
+                alexander,
+                alonso,
+                anand,
+                barzdukas,
+                li,
+                justice,
+                norman,
+                olivetto
+            };
+
+            context.AddRange(students);
+
             var Attendances = new Attendance[]
             {
                 new Attendance {
                     Student = alexander,
                     Course = chemistry,
-                    EventType = EventType.A
+                    EventType = EventType.UCA
                 },
                 new Attendance {
                     Student = alexander,
                     Course = microeconomics,
-                    EventType = EventType.C
+                    EventType = EventType.Hendrix
                 },
                 new Attendance {
                     Student = alexander,
                     Course = macroeconmics,
-                    EventType = EventType.B
+                    EventType = EventType.Other
                 },
                 new Attendance {
                     Student = alonso,
                     Course = calculus,
-                    EventType = EventType.B
+                    EventType = EventType.UCA
                 },
                 new Attendance {
                     Student = alonso,
                     Course = trigonometry,
-                    EventType = EventType.B
+                    EventType = EventType.Hendrix
                 },
                 new Attendance {
                     Student = alonso,
                     Course = composition,
-                    EventType = EventType.B
+                    EventType = EventType.Other
                 },
                 new Attendance {
                     Student = anand,
-                    Course = chemistry
+                    Course = chemistry,
+                    EventType = EventType.UCA
                 },
                 new Attendance {
                     Student = anand,
                     Course = microeconomics,
-                    EventType = EventType.B
+                    EventType = EventType.Hendrix
                 },
                 new Attendance {
                     Student = barzdukas,
                     Course = chemistry,
-                    EventType = EventType.B
+                    EventType = EventType.UCA
                 },
                 new Attendance {
                     Student = li,
                     Course = composition,
-                    EventType = EventType.B
+                    EventType = EventType.Other
                 },
                 new Attendance {
                     Student = justice,
                     Course = literature,
-                    EventType = EventType.B
+                    EventType = EventType.Hendrix
                 }
             };
 

@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\build\MUSCAttendance.props" />
+  <Import Project="../build/MUSCAttendance.props" />
 </Project>
