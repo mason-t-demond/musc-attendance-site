@@ -9,7 +9,8 @@ namespace MUSCAttendance.Models
     }
 
     public class Course
-    {
+    {   
+        [Display(Name = "Log ID")]
         public int CourseID { get; set; }
 
         [StringLength(50, MinimumLength = 3)]
@@ -25,10 +26,11 @@ namespace MUSCAttendance.Models
         public string Description { get; set; }
 
         [Display(Name = "Performed in Event?")]
-        public boolean Performed { get; set; }
+        public bool Performed { get; set; }
 
         public int DepartmentID { get; set; }
 
+        public ICollection<Instructor> Instructors { get; set; }
         public Department Department { get; set; }
         public ICollection<Enrollment> Enrollments { get; set; }
     }

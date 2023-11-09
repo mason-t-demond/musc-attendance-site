@@ -31,9 +31,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Courses[0].Performed)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.Courses[0].Department)
-            </th>
+            </th> *@
             <th></th>
         </tr>
     </thead>
@@ -59,9 +59,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Performed)
             </td>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.Department.Name)
-            </td>
+            </td> *@
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.CourseID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.CourseID">Details</a> |
