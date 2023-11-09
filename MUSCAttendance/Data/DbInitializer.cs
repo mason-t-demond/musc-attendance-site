@@ -190,65 +190,79 @@ namespace MUSCAttendance.Data
 
             var chemistry = new Course
             {
-                CourseID = 1050,
-                Title = "Chemistry",
-                Credits = 3,
+                CourseID = 1,
+                Title = "Musical",
+                EventDate = DateTime.Parse("2023-4-15"),
+                Type = EventType.UCA,
+                Description = "A musical event at UCA.",
+                Performed = "no",
                 Department = engineering,
-                Instructors = new List<Instructor> { kapoor, harui }
             };
 
             var microeconomics = new Course
             {
-                CourseID = 4022,
-                Title = "Microeconomics",
-                Credits = 3,
-                Department = economics,
-                Instructors = new List<Instructor> { zheng }
+                CourseID = 2,
+                Title = "Play",
+                EventDate = DateTime.Parse("2023-6-21"),
+                Type = EventType.Hendrix,
+                Description = "Saw a play at Hendrix.",
+                Performed = "yes",
+                Department = engineering,
             };
 
             var macroeconmics = new Course
             {
-                CourseID = 4041,
-                Title = "Macroeconomics",
-                Credits = 3,
-                Department = economics,
-                Instructors = new List<Instructor> { zheng }
+                CourseID = 3,
+                Title = "Concert",
+                EventDate = DateTime.Parse("2023-11-2"),
+                Type = EventType.Other,
+                Description = "Performed in a concert.",
+                Performed = "yes",
+                Department = engineering,
             };
 
             var calculus = new Course
             {
-                CourseID = 1045,
-                Title = "Calculus",
-                Credits = 4,
-                Department = mathematics,
-                Instructors = new List<Instructor> { fakhouri }
+                CourseID = 4,
+                Title = "Play",
+                EventDate = DateTime.Parse("2023-9-16"),
+                Type = EventType.UCA,
+                Description = "Saw a play at UCA.",
+                Performed = "no",
+                Department = engineering,
             };
 
             var trigonometry = new Course
             {
-                CourseID = 3141,
-                Title = "Trigonometry",
-                Credits = 4,
-                Department = mathematics,
-                Instructors = new List<Instructor> { harui }
+                CourseID = 5,
+                Title = "Musical",
+                EventDate = DateTime.Parse("2023-11-15"),
+                Type = EventType.Hendrix,
+                Description = "Performed in a musical at Hendrix.",
+                Performed = "yes",
+                Department = engineering,
             };
 
             var composition = new Course
             {
-                CourseID = 2021,
-                Title = "Composition",
-                Credits = 3,
-                Department = english,
-                Instructors = new List<Instructor> { abercrombie }
+                CourseID = 6,
+                Title = "Play",
+                EventDate = DateTime.Parse("2023-3-24"),
+                Type = EventType.Other,
+                Description = "Saw a play at the theatre in Little Rock",
+                Performed = "no",
+                Department = engineering,
             };
 
             var literature = new Course
             {
-                CourseID = 2042,
-                Title = "Literature",
-                Credits = 4,
-                Department = english,
-                Instructors = new List<Instructor> { abercrombie }
+                CourseID = 7,
+                Title = "Musical",
+                EventDate = DateTime.Parse("2023-5-2"),
+                Type = EventType.Hendrix,
+                Description = "Saw a musical at Hendrix!",
+                Performed = "no",
+                Department = engineering,
             };
 
             var courses = new Course[]

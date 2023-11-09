@@ -51,7 +51,8 @@ namespace MUSCAttendance.Migrations
                     Name = table.Column<string>(type: "TEXT", maxLength: 50, nullable: true),
                     Budget = table.Column<decimal>(type: "money", nullable: false),
                     StartDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    InstructorID = table.Column<int>(type: "INTEGER", nullable: true)
+                    InstructorID = table.Column<int>(type: "INTEGER", nullable: true),
+                    ConcurrencyToken = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -85,9 +86,13 @@ namespace MUSCAttendance.Migrations
                 name: "Course",
                 columns: table => new
                 {
-                    CourseID = table.Column<int>(type: "INTEGER", nullable: false),
+                    CourseID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(type: "TEXT", maxLength: 50, nullable: true),
-                    Credits = table.Column<int>(type: "INTEGER", nullable: false),
+                    EventDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Type = table.Column<int>(type: "INTEGER", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: true),
+                    Performed = table.Column<string>(type: "TEXT", nullable: true),
                     DepartmentID = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>

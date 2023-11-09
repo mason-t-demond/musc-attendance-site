@@ -54,7 +54,7 @@ namespace MUSCAttendance.Pages.Courses
             if (await TryUpdateModelAsync<Course>(
                  courseToUpdate,
                  "course",   // Prefix for form value.
-                   c => c.Credits, c => c.DepartmentID, c => c.Title))
+                   c => c.Title, c => c.EventDate, c => c.Type, c => c.Description, c => c.Performed, c => c.DepartmentID))
             {
                 await _context.SaveChangesAsync();
                 return RedirectToPage("./Index");

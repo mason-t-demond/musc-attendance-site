@@ -4,22 +4,34 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MUSCAttendance.Models
 {
+    public enum EventType {
+        Hendrix, UCA, Other
+    }
+
     public class Course
-    {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Display(Name = "Number")]
+    {   
+        [Display(Name = "Log ID")]
         public int CourseID { get; set; }
 
         [StringLength(50, MinimumLength = 3)]
+        [Display(Name = "Event Title")]
         public string Title { get; set; }
 
-        [Range(0, 5)]
-        public int Credits { get; set; }
+        [DataType(DataType.Date)]
+        [Display(Name = "Date of Event")]
+        public DateTime EventDate { get; set; }
+
+        public EventType Type { get; set; }
+
+        public string Description { get; set; }
+
+        [Display(Name = "Performed in Event?")]
+        public string Performed { get; set; }
 
         public int DepartmentID { get; set; }
 
-        public Department Department { get; set; }
-        public ICollection<Attendance> Attendances { get; set; }
         public ICollection<Instructor> Instructors { get; set; }
+        public Department Department { get; set; }
+        public ICollection<Enrollment> Enrollments { get; set; }
     }
 }

@@ -59,17 +59,27 @@ namespace MUSCAttendance.Migrations
             modelBuilder.Entity("MUSCAttendance.Models.Course", b =>
                 {
                     b.Property<int>("CourseID")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Credits")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("DepartmentID")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("EventDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Performed")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Title")
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("CourseID");
 

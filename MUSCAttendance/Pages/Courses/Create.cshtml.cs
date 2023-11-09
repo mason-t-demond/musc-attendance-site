@@ -29,7 +29,7 @@ namespace MUSCAttendance.Pages.Courses
             if (await TryUpdateModelAsync<Course>(
                  emptyCourse,
                  "course",   // Prefix for form value.
-                 s => s.CourseID, s => s.DepartmentID, s => s.Title, s => s.Credits))
+                 s => s.CourseID, s => s.Title, s => s.EventDate, s => s.Type, s => s.Description, s => s.Performed))
             {
                 _context.Courses.Add(emptyCourse);
                 await _context.SaveChangesAsync();
