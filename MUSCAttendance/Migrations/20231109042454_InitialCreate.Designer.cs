@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MUSCAttendance.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20231109025017_InitialCreate")]
+    [Migration("20231109042454_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -77,6 +77,9 @@ namespace MUSCAttendance.Migrations
                     b.Property<string>("Performed")
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("StudentID")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Title")
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
@@ -87,6 +90,8 @@ namespace MUSCAttendance.Migrations
                     b.HasKey("CourseID");
 
                     b.HasIndex("DepartmentID");
+
+                    b.HasIndex("StudentID");
 
                     b.ToTable("Course", (string)null);
                 });
@@ -230,6 +235,10 @@ namespace MUSCAttendance.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("MUSCAttendance.Models.Student", null)
+                        .WithMany("Courses")
+                        .HasForeignKey("StudentID");
+
                     b.Navigation("Department");
                 });
 
@@ -271,6 +280,8 @@ namespace MUSCAttendance.Migrations
             modelBuilder.Entity("MUSCAttendance.Models.Student", b =>
                 {
                     b.Navigation("Attendances");
+
+                    b.Navigation("Courses");
                 });
 #pragma warning restore 612, 618
         }

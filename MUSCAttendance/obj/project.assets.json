@@ -11570,26 +11570,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MrMcQuinn\\.nuget\\packages\\": {}
+    "/Users/ryanfuller/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MrMcQuinn\\Documents\\School\\Comp Sci\\340\\musc-attendance-site\\MUSCAttendance\\MUSCAttendance.csproj",
+      "projectUniqueName": "/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/MUSCAttendance.csproj",
       "projectName": "MUSCAttendance",
-      "projectPath": "C:\\Users\\MrMcQuinn\\Documents\\School\\Comp Sci\\340\\musc-attendance-site\\MUSCAttendance\\MUSCAttendance.csproj",
-      "packagesPath": "C:\\Users\\MrMcQuinn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MrMcQuinn\\Documents\\School\\Comp Sci\\340\\musc-attendance-site\\MUSCAttendance\\obj\\",
+      "projectPath": "/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/MUSCAttendance.csproj",
+      "packagesPath": "/Users/ryanfuller/.nuget/packages/",
+      "outputPath": "/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MrMcQuinn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/ryanfuller/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11660,7 +11658,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }
