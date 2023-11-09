@@ -24,10 +24,9 @@ namespace  MUSCAttendance.Pages
         {
             IQueryable<EnrollmentDateGroup> data =
                 from student in _context.Students
-                group student by student.EnrollmentDate into dateGroup
+                group student by student.GraduationYear into dateGroup
                 select new EnrollmentDateGroup()
                 {
-                    EnrollmentDate = dateGroup.Key,
                     StudentCount = dateGroup.Count()
                 };
 

@@ -1,19 +1,21 @@
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace MUSCAttendance.Models
 {
-    public enum Grade
+    public enum EventType
     {
-        A, B, C, D, F, I, W
+        HDX, UCA, Other,A,B,C,D,E,F
     }
 
-    public class Enrollment
+    public class Attendance
     {
-        public int EnrollmentID { get; set; }
+        public int AttendanceID { get; set; }
         public int CourseID { get; set; }
         public int StudentID { get; set; }
-        [DisplayFormat(NullDisplayText = "No grade")]
-        public Grade? Grade { get; set; }
+
+        [Display(Name = "Event Type")]
+        public EventType EventType { get; set; }
 
         public Course Course { get; set; }
         public Student Student { get; set; }

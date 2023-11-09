@@ -42,11 +42,11 @@ namespace MUSCAttendance.Pages.Instructors
             if (courseID != null)
             {
                 CourseID = courseID.Value;
-                IEnumerable<Enrollment> Enrollments = await _context.Enrollments
+                IEnumerable<Attendance> Attendances = await _context.Attendances
                     .Where(x => x.CourseID == CourseID)                    
                     .Include(i=>i.Student)
                     .ToListAsync();                 
-                InstructorData.Enrollments = Enrollments;
+                InstructorData.Attendances = Attendances;
             }
         }
     }
