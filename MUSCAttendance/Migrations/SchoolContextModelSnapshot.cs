@@ -47,8 +47,8 @@ namespace MUSCAttendance.Migrations
                     b.Property<DateTime>("EventDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Performed")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Performed")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Title")
                         .HasMaxLength(50)

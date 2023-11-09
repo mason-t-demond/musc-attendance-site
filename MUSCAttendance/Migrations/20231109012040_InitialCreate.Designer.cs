@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MUSCAttendance.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20231109011405_InitialCreate")]
+    [Migration("20231109012040_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -50,8 +50,8 @@ namespace MUSCAttendance.Migrations
                     b.Property<DateTime>("EventDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Performed")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Performed")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Title")
                         .HasMaxLength(50)

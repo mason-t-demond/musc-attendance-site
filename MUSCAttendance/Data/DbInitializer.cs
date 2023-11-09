@@ -195,7 +195,7 @@ namespace MUSCAttendance.Data
                 EventDate = DateTime.Parse("2023-4-15"),
                 Type = EventType.UCA,
                 Description = "A musical event at UCA.",
-                Performed = false,
+                Performed = "no",
                 Department = engineering,
             };
 
@@ -206,7 +206,7 @@ namespace MUSCAttendance.Data
                 EventDate = DateTime.Parse("2023-6-21"),
                 Type = EventType.Hendrix,
                 Description = "Saw a play at Hendrix.",
-                Performed = false,
+                Performed = "yes",
                 Department = engineering,
             };
 
@@ -217,7 +217,7 @@ namespace MUSCAttendance.Data
                 EventDate = DateTime.Parse("2023-11-2"),
                 Type = EventType.Other,
                 Description = "Performed in a concert.",
-                Performed = true,
+                Performed = "yes",
                 Department = engineering,
             };
 
@@ -228,7 +228,7 @@ namespace MUSCAttendance.Data
                 EventDate = DateTime.Parse("2023-9-16"),
                 Type = EventType.UCA,
                 Description = "Saw a play at UCA.",
-                Performed = false,
+                Performed = "no",
                 Department = engineering,
             };
 
@@ -239,7 +239,7 @@ namespace MUSCAttendance.Data
                 EventDate = DateTime.Parse("2023-11-15"),
                 Type = EventType.Hendrix,
                 Description = "Performed in a musical at Hendrix.",
-                Performed = true,
+                Performed = "yes",
                 Department = engineering,
             };
 
@@ -250,7 +250,7 @@ namespace MUSCAttendance.Data
                 EventDate = DateTime.Parse("2023-3-24"),
                 Type = EventType.Other,
                 Description = "Saw a play at the theatre in Little Rock",
-                Performed = false,
+                Performed = "no",
                 Department = engineering,
             };
 
@@ -261,7 +261,7 @@ namespace MUSCAttendance.Data
                 EventDate = DateTime.Parse("2023-5-2"),
                 Type = EventType.Hendrix,
                 Description = "Saw a musical at Hendrix!",
-                Performed = false,
+                Performed = "no",
                 Department = engineering,
             };
 

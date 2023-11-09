@@ -26,7 +26,7 @@ namespace MUSCAttendance.Models
         public string Description { get; set; }
 
         [Display(Name = "Performed in Event?")]
-        public bool Performed { get; set; }
+        public string Performed { get; set; }
 
         public int DepartmentID { get; set; }
 
