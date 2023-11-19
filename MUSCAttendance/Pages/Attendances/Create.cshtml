@@ -1,0 +1,59 @@
+@page
+@model MUSCAttendance.Pages.Attendances.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Attendance</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Attendance.EventDate" class="control-label"></label>
+                <input asp-for="Attendance.EventDate" class="form-control" />
+                <span asp-validation-for="Attendance.EventDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attendance.Type" class="control-label"></label>
+                <select asp-for="Attendance.Type" class="form-control"></select>
+                <span asp-validation-for="Attendance.Type" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Attendance.Performed" /> @Html.DisplayNameFor(model => model.Attendance.Performed)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Attendance.HasProgram" /> @Html.DisplayNameFor(model => model.Attendance.HasProgram)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attendance.OtherDescription" class="control-label"></label>
+                <input asp-for="Attendance.OtherDescription" class="form-control" />
+                <span asp-validation-for="Attendance.OtherDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attendance.ProgramDescription" class="control-label"></label>
+                <input asp-for="Attendance.ProgramDescription" class="form-control" />
+                <span asp-validation-for="Attendance.ProgramDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MUSCAttendance", "MUSCAttendance.csproj", "{E53792ED-18DC-49AC-B709-C8CE1EA28803}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MUSCAttendance", "MUSCAttendance.csproj", "{696F7C27-C0BB-4BF8-ADA1-B8ADB985F3FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E53792ED-18DC-49AC-B709-C8CE1EA28803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E53792ED-18DC-49AC-B709-C8CE1EA28803}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E53792ED-18DC-49AC-B709-C8CE1EA28803}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E53792ED-18DC-49AC-B709-C8CE1EA28803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{696F7C27-C0BB-4BF8-ADA1-B8ADB985F3FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{696F7C27-C0BB-4BF8-ADA1-B8ADB985F3FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{696F7C27-C0BB-4BF8-ADA1-B8ADB985F3FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{696F7C27-C0BB-4BF8-ADA1-B8ADB985F3FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {EB63CA8C-5F91-4936-B327-792002AA673F}
+		SolutionGuid = {121B5857-3657-4D3C-AFC3-486871904D78}
 	EndGlobalSection
 EndGlobal
