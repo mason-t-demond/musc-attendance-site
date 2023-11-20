@@ -434,10 +434,10 @@ $.extend( $.validator, {
 				}
 
 				var validator = $.data( this.form, "validator" ),
-					EventType = "on" + event.type.replace( /^validate/, "" ),
+					eventType = "on" + event.type.replace( /^validate/, "" ),
 					settings = validator.settings;
-				if ( settings[ EventType ] && !$( this ).is( settings.ignore ) ) {
-					settings[ EventType ].call( validator, this, event );
+				if ( settings[ eventType ] && !$( this ).is( settings.ignore ) ) {
+					settings[ eventType ].call( validator, this, event );
 				}
 			}
 

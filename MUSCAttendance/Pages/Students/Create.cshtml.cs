@@ -25,25 +25,20 @@ namespace MUSCAttendance.Pages.Students
         }
 
         [BindProperty]
-        public Student Student { get; set; }
-        
+        public Student Student { get; set; } = default!;
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
-{
-    var emptyStudent = new Student();
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
 
-    if (await TryUpdateModelAsync<Student>(
-        emptyStudent,
-        "student",   // Prefix for form value.
-        s => s.FirstMidName, s => s.LastName, s => s.GraduationYear, s => s.TotalAttendances))
-    {
-        _context.Students.Add(emptyStudent);
-        await _context.SaveChangesAsync();
-        return RedirectToPage("./Index");
-    }
+            _context.Students.Add(Student);
+            await _context.SaveChangesAsync();
 
-    return Page();
-}
+            return RedirectToPage("./Index");
+        }
     }
 }

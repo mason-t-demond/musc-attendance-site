@@ -1,45 +1,29 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using MUSCAttendance.Pages.Courses;
-using MUSCAttendance.Pages.Instructors;
 
 namespace MUSCAttendance.Models
 {
     public class Student
     {
+        [Display(Name = "Hendrix ID")]
         public int ID { get; set; }
-        [Required]
-        [StringLength(50)]
-        [Display(Name = "Last Name")]
+
+        [Display(Name = "Last")]
         public string LastName { get; set; }
-        [Required]
-        [StringLength(50, ErrorMessage = "First name cannot be longer than 50 characters.")]
-        [Column("FirstName")]
-        [Display(Name = "First Name")]
+
+        [Display(Name = "First")]
         public string FirstMidName { get; set; }
 
+        [Display(Name = "Year Graduating")]
+        public int GradYear { get; set; }
 
-        [Required]
-        [Display(Name = "Graduation Year")]
-        public int GraduationYear { get; set; }
-
-        [Required]
-        [Display(Name = "Total Attendances")]
-        public int TotalAttendances { get; set; }
-
-        [Display(Name = "Full Name")]
-        public string FullName
-        {
+        [Display(Name = "Total Logs")]
+        public int TotalAttendances {
             get
             {
-                return LastName + ", " + FirstMidName;
+                return Attendances.Count;
             }
         }
 
         public ICollection<Attendance> Attendances { get; set; }
-
-        public List<Course> Courses { get; set; }
     }
 }

@@ -19,25 +19,25 @@ namespace MUSCAttendance.Pages.Students
             _context = context;
         }
 
-      public Student Student { get; set; }
+        public Student Student { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
-{
-    if (id == null)
-    {
-        return NotFound();
-    }
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-Student = await _context.Students
-        .Include(s => s.Attendances)
-        .ThenInclude(e => e.Course)
-        .AsNoTracking()
-        .FirstOrDefaultAsync(m => m.ID == id);
-    if (Student == null)
-    {
-        return NotFound();
-    }
-    return Page();
-}
+            var student = await _context.Students.FirstOrDefaultAsync(m => m.ID == id);
+            if (student == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                Student = student;
+            }
+            return Page();
+        }
     }
 }
