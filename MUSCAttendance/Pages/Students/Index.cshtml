@@ -37,13 +37,13 @@
             <th>
                 <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort"
                    asp-route-currentFilter="@Model.CurrentFilter">
-                    @Html.DisplayNameFor(model => model.Students[0].GraduationYear)
+                    @Html.DisplayNameFor(model => model.Students[0].GradYear)
                 </a>         
             </th>
             <th>
             <a asp-page="./Index" asp-route-sortOrder="@Model.AttendanceSort"
                asp-route-currentFilter="@Model.CurrentFilter">
-                @Html.DisplayNameFor(model => model.Students[0].TotalAttendances)                
+                @Html.DisplayNameFor(model => model.Students[0].Attendances.Count)                
                 </a>         
             </th>
             
@@ -62,10 +62,10 @@
                 @Html.DisplayFor(modelItem => item.FirstMidName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.GraduationYear)
+                @Html.DisplayFor(modelItem => item.GradYear)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TotalAttendances)
+                @Html.DisplayFor(modelItem => item.Attendances.Count)
             </td>
             
             <td>

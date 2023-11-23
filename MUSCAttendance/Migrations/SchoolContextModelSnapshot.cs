@@ -17,149 +17,62 @@ namespace MUSCAttendance.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
 
-            modelBuilder.Entity("CourseInstructor", b =>
-                {
-                    b.Property<int>("CoursesCourseID")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("InstructorsID")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("CoursesCourseID", "InstructorsID");
-
-                    b.HasIndex("InstructorsID");
-
-                    b.ToTable("CourseInstructor");
-                });
-
             modelBuilder.Entity("MUSCAttendance.Models.Attendance", b =>
                 {
-                    b.Property<int>("AttendanceID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CourseID")
+                    b.Property<int?>("FormID")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("EventType")
+                    b.Property<int?>("StudentID")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("StudentID")
-                        .HasColumnType("INTEGER");
+                    b.HasKey("ID");
 
-                    b.HasKey("AttendanceID");
-
-                    b.HasIndex("CourseID");
+                    b.HasIndex("FormID");
 
                     b.HasIndex("StudentID");
 
                     b.ToTable("Attendances");
                 });
 
-            modelBuilder.Entity("MUSCAttendance.Models.Course", b =>
-                {
-                    b.Property<int>("CourseID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("DepartmentID")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("EventDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Performed")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("StudentID")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Title")
-                        .HasMaxLength(50)
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("Type")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("CourseID");
-
-                    b.HasIndex("DepartmentID");
-
-                    b.HasIndex("StudentID");
-
-                    b.ToTable("Course", (string)null);
-                });
-
-            modelBuilder.Entity("MUSCAttendance.Models.Department", b =>
-                {
-                    b.Property<int>("DepartmentID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<decimal>("Budget")
-                        .HasColumnType("money");
-
-                    b.Property<Guid>("ConcurrencyToken")
-                        .IsConcurrencyToken()
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("InstructorID")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(50)
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("DepartmentID");
-
-                    b.HasIndex("InstructorID");
-
-                    b.ToTable("Departments");
-                });
-
-            modelBuilder.Entity("MUSCAttendance.Models.Instructor", b =>
+            modelBuilder.Entity("MUSCAttendance.Models.Form", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("FirstMidName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("TEXT")
-                        .HasColumnName("FirstName");
+                    b.Property<bool>("Approved")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("HireDate")
+                    b.Property<DateTime>("EventDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(50)
+                    b.Property<bool>("HasProgram")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("OtherDescription")
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("Performed")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ProgramDescription")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("StudentID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("ID");
 
-                    b.ToTable("Instructor", (string)null);
-                });
+                    b.HasIndex("StudentID");
 
-            modelBuilder.Entity("MUSCAttendance.Models.OfficeAssignment", b =>
-                {
-                    b.Property<int>("InstructorID")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Location")
-                        .HasMaxLength(50)
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("InstructorID");
-
-                    b.ToTable("OfficeAssignments");
+                    b.ToTable("Form", (string)null);
                 });
 
             modelBuilder.Entity("MUSCAttendance.Models.Student", b =>
@@ -174,111 +87,48 @@ namespace MUSCAttendance.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("FirstName");
 
-                    b.Property<int>("GraduationYear")
+                    b.Property<int>("GradYear")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("TotalAttendances")
-                        .HasColumnType("INTEGER");
 
                     b.HasKey("ID");
 
                     b.ToTable("Student", (string)null);
                 });
 
-            modelBuilder.Entity("CourseInstructor", b =>
-                {
-                    b.HasOne("MUSCAttendance.Models.Course", null)
-                        .WithMany()
-                        .HasForeignKey("CoursesCourseID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MUSCAttendance.Models.Instructor", null)
-                        .WithMany()
-                        .HasForeignKey("InstructorsID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("MUSCAttendance.Models.Attendance", b =>
                 {
-                    b.HasOne("MUSCAttendance.Models.Course", "Course")
-                        .WithMany("Attendances")
-                        .HasForeignKey("CourseID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("MUSCAttendance.Models.Form", "Form")
+                        .WithMany()
+                        .HasForeignKey("FormID");
 
                     b.HasOne("MUSCAttendance.Models.Student", "Student")
                         .WithMany("Attendances")
-                        .HasForeignKey("StudentID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("StudentID");
 
-                    b.Navigation("Course");
+                    b.Navigation("Form");
 
                     b.Navigation("Student");
                 });
 
-            modelBuilder.Entity("MUSCAttendance.Models.Course", b =>
+            modelBuilder.Entity("MUSCAttendance.Models.Form", b =>
                 {
-                    b.HasOne("MUSCAttendance.Models.Department", "Department")
-                        .WithMany("Courses")
-                        .HasForeignKey("DepartmentID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MUSCAttendance.Models.Student", null)
-                        .WithMany("Courses")
+                    b.HasOne("MUSCAttendance.Models.Student", "Student")
+                        .WithMany("Forms")
                         .HasForeignKey("StudentID");
 
-                    b.Navigation("Department");
-                });
-
-            modelBuilder.Entity("MUSCAttendance.Models.Department", b =>
-                {
-                    b.HasOne("MUSCAttendance.Models.Instructor", "Administrator")
-                        .WithMany()
-                        .HasForeignKey("InstructorID");
-
-                    b.Navigation("Administrator");
-                });
-
-            modelBuilder.Entity("MUSCAttendance.Models.OfficeAssignment", b =>
-                {
-                    b.HasOne("MUSCAttendance.Models.Instructor", "Instructor")
-                        .WithOne("OfficeAssignment")
-                        .HasForeignKey("MUSCAttendance.Models.OfficeAssignment", "InstructorID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Instructor");
-                });
-
-            modelBuilder.Entity("MUSCAttendance.Models.Course", b =>
-                {
-                    b.Navigation("Attendances");
-                });
-
-            modelBuilder.Entity("MUSCAttendance.Models.Department", b =>
-                {
-                    b.Navigation("Courses");
-                });
-
-            modelBuilder.Entity("MUSCAttendance.Models.Instructor", b =>
-                {
-                    b.Navigation("OfficeAssignment");
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("MUSCAttendance.Models.Student", b =>
                 {
                     b.Navigation("Attendances");
 
-                    b.Navigation("Courses");
+                    b.Navigation("Forms");
                 });
 #pragma warning restore 612, 618
         }

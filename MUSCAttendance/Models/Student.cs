@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using MUSCAttendance.Pages.Courses;
-using MUSCAttendance.Pages.Instructors;
 
 namespace MUSCAttendance.Models
 {
@@ -23,11 +21,9 @@ namespace MUSCAttendance.Models
 
         [Required]
         [Display(Name = "Graduation Year")]
-        public int GraduationYear { get; set; }
+        public int GradYear { get; set; }
 
-        [Required]
-        [Display(Name = "Total Attendances")]
-        public int TotalAttendances { get; set; }
+        
 
         [Display(Name = "Full Name")]
         public string FullName
@@ -40,6 +36,6 @@ namespace MUSCAttendance.Models
 
         public ICollection<Attendance> Attendances { get; set; }
 
-        public List<Course> Courses { get; set; }
+        public List<Form> Forms { get; set; }
     }
 }
