@@ -29,8 +29,7 @@ namespace MUSCAttendance.Pages.Students
     }
 
 Student = await _context.Students
-        .Include(s => s.Attendances)
-        .ThenInclude(e => e.Form)
+        .Include(s => s.Forms)
         .AsNoTracking()
         .FirstOrDefaultAsync(m => m.ID == id);
     if (Student == null)

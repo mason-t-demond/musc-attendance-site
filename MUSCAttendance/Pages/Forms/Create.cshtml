@@ -14,13 +14,23 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+                <label asp-for="Form.Student" class="control-label"></label>
+                <input asp-for="Form.Student" class="form-control" />
+                <span asp-validation-for="Form.Student" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Form.EventDate" class="control-label"></label>
                 <input asp-for="Form.EventDate" class="form-control" />
                 <span asp-validation-for="Form.EventDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Form.Type" class="control-label"></label>
-                <select asp-for="Form.Type" class="form-control"></select>
+                <select asp-for="Form.Type" class="form-control">
+                    <option value="null"> </option>
+                    <option value="HDX">HDX</option>
+                    <option value="UCA">UCA</option>
+                    <option value="Other">Other</option>
+                </select>
                 <span asp-validation-for="Form.Type" class="text-danger"></span>
             </div>
             <div class="form-group form-check">

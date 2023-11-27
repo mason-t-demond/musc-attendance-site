@@ -35,9 +35,10 @@ namespace MUSCAttendance.Pages.Forms
                 return Page();
             }
 
+
             _context.Forms.Add(Form);
             await _context.SaveChangesAsync();
-
+            
             return RedirectToPage("./Index");
         }
     }

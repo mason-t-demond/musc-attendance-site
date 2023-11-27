@@ -30,14 +30,14 @@
             @Html.DisplayFor(model => model.Student.GradYear)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Student.Attendances.Count)
+            @Html.DisplayNameFor(model => model.Student.Forms.Count)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Student.Attendances.Count)
+            @Html.DisplayFor(model => model.Student.Forms.Count)
         </dd>
        
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Student.Attendances)
+            @Html.DisplayNameFor(model => model.Student.Forms)
         </dt>
         <dd class="col-sm-10">
             <table class="table">
@@ -54,36 +54,36 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Student.Attendances) {
+@foreach (var item in Model.Student.Forms) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Form.ID)
+                @Html.DisplayFor(modelItem => item.ID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Form.EventDate)
+                @Html.DisplayFor(modelItem => item.EventDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Form.Type)
+                @Html.DisplayFor(modelItem => item.Type)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Form.Performed)
+                @Html.DisplayFor(modelItem => item.Performed)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Form.HasProgram)
+                @Html.DisplayFor(modelItem => item.HasProgram)
             </td>
             @* <td>
-                @Html.DisplayFor(modelItem => item.Form.OtherDescription)
+                @Html.DisplayFor(modelItem => item.OtherDescription)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Form.ProgramDescription)
+                @Html.DisplayFor(modelItem => item.ProgramDescription)
             </td> *@
             <td>
-                @Html.DisplayFor(modelItem => item.Form.Approved)
+                @Html.DisplayFor(modelItem => item.Approved)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Form.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Form.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Form.ID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>
 }

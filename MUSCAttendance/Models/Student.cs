@@ -34,8 +34,6 @@ namespace MUSCAttendance.Models
             }
         }
 
-        public ICollection<Attendance> Attendances { get; set; }
-
         public List<Form> Forms { get; set; }
     }
 }

@@ -34,7 +34,7 @@ namespace MUSCAttendance.Pages.Students
         {
             CurrentSort = sortOrder;
             NameSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            AttendanceSort = sortOrder == "Attendances.Count" ? "attendance_desc" : "Attendances.Count";
+            AttendanceSort = sortOrder == "Forms.Count" ? "form_desc" : "Forms.Count";
             DateSort = sortOrder == "Date" ? "date_desc" : "Date";
             if (searchString != null)
             {
@@ -47,8 +47,9 @@ namespace MUSCAttendance.Pages.Students
 
             CurrentFilter = searchString;
 
-            IQueryable<Student> studentsIQ = from s in _context.Students
-                                             select s;
+            IQueryable<Student> studentsIQ =  _context.Students
+        .Include(s => s.Forms)
+        .AsNoTracking();
             if (!String.IsNullOrEmpty(searchString))
             {
                 studentsIQ = studentsIQ.Where(s => s.LastName.Contains(searchString)
@@ -59,11 +60,11 @@ namespace MUSCAttendance.Pages.Students
                 case "name_desc":
                     studentsIQ = studentsIQ.OrderByDescending(s => s.LastName);
                     break;
-                case "attentance_desc":
-                    studentsIQ = studentsIQ.OrderByDescending(s => s.Attendances.Count);
+                case "form_desc":
+                    studentsIQ = studentsIQ.OrderByDescending(s => s.Forms.Count);
                     break;
-                case "Attendances.Count":
-                    studentsIQ = studentsIQ.OrderByDescending(s => s.Attendances.Count);
+                case "Forms.Count":
+                    studentsIQ = studentsIQ.OrderByDescending(s => s.Forms.Count);
                     break;
                 case "Date":
                     studentsIQ = studentsIQ.OrderBy(s => s.GradYear);

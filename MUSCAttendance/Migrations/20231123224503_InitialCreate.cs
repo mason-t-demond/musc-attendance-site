@@ -51,40 +51,6 @@ namespace MUSCAttendance.Migrations
                         principalColumn: "ID");
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Attendances",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    FormID = table.Column<int>(type: "INTEGER", nullable: true),
-                    StudentID = table.Column<int>(type: "INTEGER", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Attendances", x => x.ID);
-                    table.ForeignKey(
-                        name: "FK_Attendances_Form_FormID",
-                        column: x => x.FormID,
-                        principalTable: "Form",
-                        principalColumn: "ID");
-                    table.ForeignKey(
-                        name: "FK_Attendances_Student_StudentID",
-                        column: x => x.StudentID,
-                        principalTable: "Student",
-                        principalColumn: "ID");
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Attendances_FormID",
-                table: "Attendances",
-                column: "FormID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Attendances_StudentID",
-                table: "Attendances",
-                column: "StudentID");
-
             migrationBuilder.CreateIndex(
                 name: "IX_Form_StudentID",
                 table: "Form",
@@ -94,9 +60,6 @@ namespace MUSCAttendance.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Attendances");
-
             migrationBuilder.DropTable(
                 name: "Form");
 

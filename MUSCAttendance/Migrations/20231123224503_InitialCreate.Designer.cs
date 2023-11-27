@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MUSCAttendance.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20231123215709_InitialCreate")]
+    [Migration("20231123224503_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -19,27 +19,6 @@ namespace MUSCAttendance.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
-
-            modelBuilder.Entity("MUSCAttendance.Models.Attendance", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("FormID")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("StudentID")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("FormID");
-
-                    b.HasIndex("StudentID");
-
-                    b.ToTable("Attendances");
-                });
 
             modelBuilder.Entity("MUSCAttendance.Models.Form", b =>
                 {
@@ -103,21 +82,6 @@ namespace MUSCAttendance.Migrations
                     b.ToTable("Student", (string)null);
                 });
 
-            modelBuilder.Entity("MUSCAttendance.Models.Attendance", b =>
-                {
-                    b.HasOne("MUSCAttendance.Models.Form", "Form")
-                        .WithMany()
-                        .HasForeignKey("FormID");
-
-                    b.HasOne("MUSCAttendance.Models.Student", "Student")
-                        .WithMany("Attendances")
-                        .HasForeignKey("StudentID");
-
-                    b.Navigation("Form");
-
-                    b.Navigation("Student");
-                });
-
             modelBuilder.Entity("MUSCAttendance.Models.Form", b =>
                 {
                     b.HasOne("MUSCAttendance.Models.Student", "Student")
@@ -129,8 +93,6 @@ namespace MUSCAttendance.Migrations
 
             modelBuilder.Entity("MUSCAttendance.Models.Student", b =>
                 {
-                    b.Navigation("Attendances");
-
                     b.Navigation("Forms");
                 });
 #pragma warning restore 612, 618

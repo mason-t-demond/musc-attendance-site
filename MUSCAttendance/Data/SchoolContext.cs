@@ -14,7 +14,6 @@ namespace MUSCAttendance.Data
     }
 
     public DbSet<Form> Forms { get; set; }
-    public DbSet<Attendance> Attendances { get; set; }
     public DbSet<Student> Students { get; set; }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)

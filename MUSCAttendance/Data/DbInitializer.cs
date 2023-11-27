@@ -108,46 +108,12 @@ namespace MUSCAttendance.Data
                 ryan1,
                 arturo1,
                 gytis1,
-                laura1
+                laura1,
+                laura2,
                 
             };
 
             context.Forms.AddRange(forms);
-        
-
-        var Attendances = new Attendance[]
-        {
-                new Attendance {
-                    Student = elliot,
-                    Form = elliot1,
-                },
-                new Attendance {
-                    Student = mason,
-                    Form = mason1,
-                },
-                new Attendance {
-                    Student = ryan,
-                    Form = ryan1,
-                },
-                new Attendance {
-                    Student = arturo,
-                    Form = arturo1,
-                },
-                new Attendance {
-                    Student = gytis,
-                    Form = gytis1,
-                },
-                new Attendance {
-                    Student = laura,
-                    Form = laura1,
-                },
-                new Attendance {
-                    Student = laura,
-                    Form = laura2,
-                },
-            };
-
-            context.AddRange(Attendances);
             context.SaveChanges();
         }
     }

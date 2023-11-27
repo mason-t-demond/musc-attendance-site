@@ -43,7 +43,7 @@
             <th>
             <a asp-page="./Index" asp-route-sortOrder="@Model.AttendanceSort"
                asp-route-currentFilter="@Model.CurrentFilter">
-                @Html.DisplayNameFor(model => model.Students[0].Attendances.Count)                
+                @Html.DisplayNameFor(model => model.Students[0].Forms.Count)                
                 </a>         
             </th>
             
@@ -65,7 +65,7 @@
                 @Html.DisplayFor(modelItem => item.GradYear)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Attendances.Count)
+                @Html.DisplayFor(modelItem => item.Forms.Count)
             </td>
             
             <td>
