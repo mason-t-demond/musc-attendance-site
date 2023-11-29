@@ -66,8 +66,14 @@ namespace MUSCAttendance.Pages.Students
                 }
             }
 
-            return RedirectToPage("./Index");
-        }
+    if (await TryUpdateModelAsync<Student>(
+        studentToUpdate,
+        "student",
+        s => s.FirstMidName, s => s.LastName, s => s.GradYear, s => s.Forms.Count))
+    {
+        await _context.SaveChangesAsync();
+        return RedirectToPage("./Index");
+    }
 
         private bool StudentExists(int id)
         {

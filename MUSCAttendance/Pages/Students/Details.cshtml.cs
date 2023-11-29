@@ -28,16 +28,12 @@ namespace MUSCAttendance.Pages.Students
                 return NotFound();
             }
 
-            var student = await _context.Students.FirstOrDefaultAsync(m => m.ID == id);
-            if (student == null)
-            {
-                return NotFound();
-            }
-            else
-            {
-                Student = student;
-            }
-            return Page();
-        }
+Student = await _context.Students
+        .Include(s => s.Forms)
+        .AsNoTracking()
+        .FirstOrDefaultAsync(m => m.ID == id);
+    if (Student == null)
+    {
+        return NotFound();
     }
 }
