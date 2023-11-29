@@ -14,9 +14,6 @@ namespace MUSCAttendance.Models
         [Display(Name = "First")]
         public string FirstMidName { get; set; }
 
-        [Display(Name = "Year Graduating")]
-        public int GradYear { get; set; }
-
         [Required]
         [Display(Name = "Graduation Year")]
         public int GradYear { get; set; }
@@ -28,7 +25,7 @@ namespace MUSCAttendance.Models
         {
             get
             {
-                return Attendances.Count;
+                return LastName + ", " + FirstMidName;
             }
         }
 

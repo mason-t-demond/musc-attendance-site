@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using MUSCAttendance.Data;
 using MUSCAttendance.Models;
 
-namespace MUSCAttendance.Pages.Students
+namespace MUSCAttendance.Pages.Forms
 {
     public class CreateModel : PageModel
     {
@@ -25,25 +25,21 @@ namespace MUSCAttendance.Pages.Students
         }
 
         [BindProperty]
-        public Student Student { get; set; }
-        
+        public Form Form { get; set; } = default!;
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
-{
-    var emptyStudent = new Student();
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
 
-    if (await TryUpdateModelAsync<Student>(
-        emptyStudent,
-        "student",   // Prefix for form value.
-        s => s.FirstMidName, s => s.LastName, s => s.GradYear))
-    {
-        _context.Students.Add(emptyStudent);
-        await _context.SaveChangesAsync();
-        return RedirectToPage("./Index");
-    }
 
-    return Page();
-}
+            _context.Forms.Add(Form);
+            await _context.SaveChangesAsync();
+            
+            return RedirectToPage("./Index");
+        }
     }
 }

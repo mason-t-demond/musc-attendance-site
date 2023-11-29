@@ -19,14 +19,14 @@ namespace MUSCAttendance.Pages.Students
             _context = context;
         }
 
-        public Student Student { get; set; } = default!;
+      public Student Student { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+{
+    if (id == null)
+    {
+        return NotFound();
+    }
 
 Student = await _context.Students
         .Include(s => s.Forms)
@@ -35,5 +35,8 @@ Student = await _context.Students
     if (Student == null)
     {
         return NotFound();
+    }
+    return Page();
+}
     }
 }
