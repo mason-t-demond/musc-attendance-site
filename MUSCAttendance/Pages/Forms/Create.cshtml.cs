@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using MUSCAttendance.Data;
 using MUSCAttendance.Models;
 
-namespace MUSCAttendance.Pages.Attendances
+namespace MUSCAttendance.Pages.Forms
 {
     public class CreateModel : PageModel
     {
@@ -25,7 +25,7 @@ namespace MUSCAttendance.Pages.Attendances
         }
 
         [BindProperty]
-        public Attendance Attendance { get; set; } = default!;
+        public Form Form { get; set; } = default!;
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -35,9 +35,10 @@ namespace MUSCAttendance.Pages.Attendances
                 return Page();
             }
 
-            _context.Attendances.Add(Attendance);
-            await _context.SaveChangesAsync();
 
+            _context.Forms.Add(Form);
+            await _context.SaveChangesAsync();
+            
             return RedirectToPage("./Index");
         }
     }

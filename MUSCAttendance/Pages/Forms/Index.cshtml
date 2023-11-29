@@ -1,5 +1,5 @@
 @page
-@model MUSCAttendance.Pages.Attendances.IndexModel
+@model MUSCAttendance.Pages.Forms.IndexModel
 
 @{
     ViewData["Title"] = "Attendance Logs";
@@ -14,38 +14,32 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Attendance[0].AttendanceID)
+                @Html.DisplayNameFor(model => model.Form[0].EventDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Attendance[0].EventDate)
+                @Html.DisplayNameFor(model => model.Form[0].Type)
             </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Form[0].Performed)
+            </th> 
             <th>
-                @Html.DisplayNameFor(model => model.Attendance[0].Type)
-            </th>
-            @* <th>
-                @Html.DisplayNameFor(model => model.Attendance[0].Performed)
-            </th> *@
-            <th>
-                @Html.DisplayNameFor(model => model.Attendance[0].HasProgram)
+                @Html.DisplayNameFor(model => model.Form[0].HasProgram)
             </th>
             @* <th>
-                @Html.DisplayNameFor(model => model.Attendance[0].OtherDescription)
+                @Html.DisplayNameFor(model => model.Form[0].OtherDescription)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Attendance[0].ProgramDescription)
+                @Html.DisplayNameFor(model => model.Form[0].ProgramDescription)
             </th> *@
             <th>
-                @Html.DisplayNameFor(model => model.Attendance[0].Approved)
+                @Html.DisplayNameFor(model => model.Form[0].Approved)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Attendance) {
+@foreach (var item in Model.Form) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AttendanceID)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.EventDate)
             </td>
@@ -68,9 +62,9 @@
                 @Html.DisplayFor(modelItem => item.Approved)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.AttendanceID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.AttendanceID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.AttendanceID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>
 }

@@ -7,20 +7,12 @@ namespace MUSCAttendance.Models
         Hendrix, UCA, Other
     }
 
-    public class Attendance
+    public class Form
     {
-        [Display(Name = "Log ID")]
-        public int AttendanceID { get; set; }
+        [Key]
+        public int ID { get; set; }
 
         public Student Student { get; set; }
-
-        [Display(Name = "Hendrix ID")]
-        public int StudentID {
-            get
-            {
-                return Student.ID;
-            }
-        }
 
         [Display(Name = "Event Date")]
         [DataType(DataType.Date)]

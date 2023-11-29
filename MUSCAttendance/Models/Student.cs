@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MUSCAttendance.Models
 {
@@ -13,17 +14,21 @@ namespace MUSCAttendance.Models
         [Display(Name = "First")]
         public string FirstMidName { get; set; }
 
-        [Display(Name = "Year Graduating")]
+        [Required]
+        [Display(Name = "Graduation Year")]
         public int GradYear { get; set; }
 
-        [Display(Name = "Total Logs")]
-        public int TotalAttendances {
+        
+
+        [Display(Name = "Full Name")]
+        public string FullName
+        {
             get
             {
-                return Attendances.Count;
+                return LastName + ", " + FirstMidName;
             }
         }
 
-        public ICollection<Attendance> Attendances { get; set; }
+        public List<Form> Forms { get; set; }
     }
 }

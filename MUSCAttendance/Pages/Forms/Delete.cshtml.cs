@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using MUSCAttendance.Data;
 using MUSCAttendance.Models;
 
-namespace MUSCAttendance.Pages.Attendances
+namespace MUSCAttendance.Pages.Forms
 {
     public class DeleteModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace MUSCAttendance.Pages.Attendances
         }
 
         [BindProperty]
-        public Attendance Attendance { get; set; } = default!;
+        public Form Form { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,15 +29,15 @@ namespace MUSCAttendance.Pages.Attendances
                 return NotFound();
             }
 
-            var attendance = await _context.Attendances.FirstOrDefaultAsync(m => m.AttendanceID == id);
+            var form = await _context.Forms.FirstOrDefaultAsync(m => m.ID == id);
 
-            if (attendance == null)
+            if (form == null)
             {
                 return NotFound();
             }
             else
             {
-                Attendance = attendance;
+                Form = form;
             }
             return Page();
         }
@@ -49,11 +49,11 @@ namespace MUSCAttendance.Pages.Attendances
                 return NotFound();
             }
 
-            var attendance = await _context.Attendances.FindAsync(id);
-            if (attendance != null)
+            var form = await _context.Forms.FindAsync(id);
+            if (form != null)
             {
-                Attendance = attendance;
-                _context.Attendances.Remove(Attendance);
+                Form = form;
+                _context.Forms.Remove(Form);
                 await _context.SaveChangesAsync();
             }
 

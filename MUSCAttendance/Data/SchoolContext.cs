@@ -14,13 +14,14 @@ namespace MUSCAttendance.Data
         {
         }
 
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Attendance> Attendances { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Student>().ToTable("Student");
-            modelBuilder.Entity<Attendance>().ToTable("Attendance");
-        }
+    public DbSet<Form> Forms { get; set; }
+    public DbSet<Student> Students { get; set; }
+    
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Form>().ToTable(nameof(Form));
+        modelBuilder.Entity<Student>().ToTable(nameof(Student));
+      
     }
+}
 }

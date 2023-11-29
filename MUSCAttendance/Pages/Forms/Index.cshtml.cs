@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using MUSCAttendance.Data;
 using MUSCAttendance.Models;
 
-namespace MUSCAttendance.Pages.Attendances
+namespace MUSCAttendance.Pages.Forms
 {
     public class IndexModel : PageModel
     {
@@ -19,11 +19,11 @@ namespace MUSCAttendance.Pages.Attendances
             _context = context;
         }
 
-        public IList<Attendance> Attendance { get;set; } = default!;
+        public IList<Form> Form { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            Attendance = await _context.Attendances.ToListAsync();
+            Form = await _context.Forms.ToListAsync();
         }
     }
 }
