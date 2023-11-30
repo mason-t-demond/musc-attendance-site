@@ -53,7 +53,8 @@ namespace MUSCAttendance.Pages.Students
             if (!String.IsNullOrEmpty(searchString))
             {
                 studentsIQ = studentsIQ.Where(s => s.LastName.Contains(searchString)
-                                       || s.FirstMidName.Contains(searchString));
+                                       || s.FirstMidName.Contains(searchString)
+                                       || s.ID.ToString().Contains(searchString));
             }
             switch (sortOrder)
             {

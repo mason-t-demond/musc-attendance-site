@@ -8,10 +8,10 @@ namespace MUSCAttendance.Models
         [Display(Name = "Hendrix ID")]
         public int ID { get; set; }
 
-        [Display(Name = "Last")]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        [Display(Name = "First")]
+        [Display(Name = "First Name")]
         public string FirstMidName { get; set; }
 
         [Required]
@@ -25,10 +25,10 @@ namespace MUSCAttendance.Models
         {
             get
             {
-                return LastName + ", " + FirstMidName;
+                return FirstMidName + " " + LastName;
             }
         }
 
-        public List<Form> Forms { get; set; }
+        public List<Form>? Forms { get; set; }
     }
 }
