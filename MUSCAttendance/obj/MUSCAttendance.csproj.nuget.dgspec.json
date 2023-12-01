@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/elliot/Desktop/WebSystems/musc-attendance-site/MUSCAttendance/MUSCAttendance.csproj": {}
+    "/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/MUSCAttendance.csproj": {}
   },
   "projects": {
-    "/Users/elliot/Desktop/WebSystems/musc-attendance-site/MUSCAttendance/MUSCAttendance.csproj": {
+    "/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/MUSCAttendance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/elliot/Desktop/WebSystems/musc-attendance-site/MUSCAttendance/MUSCAttendance.csproj",
+        "projectUniqueName": "/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/MUSCAttendance.csproj",
         "projectName": "MUSCAttendance",
-        "projectPath": "/Users/elliot/Desktop/WebSystems/musc-attendance-site/MUSCAttendance/MUSCAttendance.csproj",
-        "packagesPath": "/Users/elliot/.nuget/packages/",
-        "outputPath": "/Users/elliot/Desktop/WebSystems/musc-attendance-site/MUSCAttendance/obj/",
+        "projectPath": "/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/MUSCAttendance.csproj",
+        "packagesPath": "/Users/ryanfuller/.nuget/packages/",
+        "outputPath": "/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/elliot/.nuget/NuGet/NuGet.Config"
+          "/Users/ryanfuller/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -82,20 +82,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.osx-arm64",
-              "version": "[7.0.14, 7.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
