@@ -7,14 +7,14 @@
 
 <h2>Students</h2>
 
-<p>
+@* <p>
     <a asp-page="Create">Create New</a>
-</p>
+</p> *@
 
 <form asp-page="./Index" method="get">
     <div class="form-actions no-color">
         <p>
-            Find by name:
+            Find by name or ID number:
             <input type="text" name="SearchString" value="@Model.CurrentFilter" />
             <input type="submit" value="Search" class="btn btn-primary" /> |
             <a asp-page="./Index">Back to full List</a>
@@ -27,7 +27,7 @@
         <tr>
             <th>
                 <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
-                   asp-route-currentFilter="@Model.CurrentFilter">
+                   asp-route-currentFilter="@Model.CurrentFilter" class="sortlink">
                     @Html.DisplayNameFor(model => model.Students[0].LastName)
                 </a>        
                 </th>
@@ -35,19 +35,29 @@
                 @Html.DisplayNameFor(model => model.Students[0].FirstMidName)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Students[0].ID)
+            </th>
+            <th>
                 <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort"
-                   asp-route-currentFilter="@Model.CurrentFilter">
+                   asp-route-currentFilter="@Model.CurrentFilter" class="sortlink">
                     @Html.DisplayNameFor(model => model.Students[0].GradYear)
                 </a>         
             </th>
             <th>
             <a asp-page="./Index" asp-route-sortOrder="@Model.AttendanceSort"
-               asp-route-currentFilter="@Model.CurrentFilter">
-                @Html.DisplayNameFor(model => model.Students[0].Forms.Count)                
+               asp-route-currentFilter="@Model.CurrentFilter" class="sortlink">
+                Total Attendances                
                 </a>         
             </th>
-            
-             
+            <th>
+                Hendrix Events
+            </th>
+            <th>
+                UCA Events
+            </th>
+            <th>
+                Other Events
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -58,8 +68,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.LastName)
             </td>
+            
             <td>
                 @Html.DisplayFor(modelItem => item.FirstMidName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.GradYear)
@@ -67,10 +81,18 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Forms.Count)
             </td>
+            <td>
+                0
+            </td>
+            <td>
+                0
+            </td>
+            <td>
+                0
+            </td>
             
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">View Attendances</a> |
                 <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>
@@ -82,7 +104,7 @@
     var prevDisabled = !Model.Students.HasPreviousPage ? "disabled" : "";
     var nextDisabled = !Model.Students.HasNextPage ? "disabled" : "";
 }
-
+@* 
 <a asp-page="./Index"
    asp-route-sortOrder="@Model.CurrentSort"
    asp-route-pageIndex="@(Model.Students.PageIndex - 1)"
@@ -96,4 +118,4 @@
    asp-route-currentFilter="@Model.CurrentFilter"
    class="btn btn-primary @nextDisabled">
     Next
-</a>
+</a> *@

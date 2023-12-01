@@ -5,36 +5,56 @@
     ViewData["Title"] = "Attendance Logs";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
+<div>
+<h1>Elliot Allen</h1>
+
+
+<h4>Progress</h4>
+<dl >
+        <dt >
+            Total Attendances
+        </dt>
+        <dd >
+            0
+        </dd>
+        <dt >
+            Hendrix events
+        </dt>
+        <dd >
+            0
+        </dd>
+        <dt >
+            UCA events
+        </dt>
+        <dd >
+            0
+        </dd>
+        <dt >
+            Other events
+        </dt>
+        <dd >
+            0
+        </dd>
+    </dl>
+</div>
+
+<hr>
+
+<div>
+    <h4>Attendances</h4>
+
+    
+      <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Form[0].EventDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Form[0].Type)
-            </th>
-             <th>
-                @Html.DisplayNameFor(model => model.Form[0].Performed)
-            </th> 
-            <th>
-                @Html.DisplayNameFor(model => model.Form[0].HasProgram)
-            </th>
-            @* <th>
-                @Html.DisplayNameFor(model => model.Form[0].OtherDescription)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Form[0].ProgramDescription)
-            </th> *@
-            <th>
-                @Html.DisplayNameFor(model => model.Form[0].Approved)
-            </th>
-            <th></th>
+            <th>Event Date</th>
+            <th>Event Location</th>
+            <th>Performed</th>
+            <th>Program?</th>
+            <th>OtherDescription</th>
+            <th>Description</th>
+            <th>Approved</th>
         </tr>
     </thead>
     <tbody>
@@ -52,12 +72,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.HasProgram)
             </td>
-            @* <td>
+             <td>
                 @Html.DisplayFor(modelItem => item.OtherDescription)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ProgramDescription)
-            </td> *@
+            </td> 
             <td>
                 @Html.DisplayFor(modelItem => item.Approved)
             </td>
@@ -70,3 +90,9 @@
 }
     </tbody>
 </table>
+</div>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+
