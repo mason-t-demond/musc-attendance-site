@@ -1128,3 +1128,12 @@ C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttend
 C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/obj/Debug/net7.0/ref/MUSCAttendance.dll
 /Users/elliot/Desktop/WebSystems/musc-attendance-site/MUSCAttendance/obj/Debug/net7.0/MUSCAttendance.sourcelink.json
 /Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/obj/Debug/net7.0/MUSCAttendance.sourcelink.json
+/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.UI.dll
+/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/bin/Debug/net7.0/Microsoft.Extensions.FileProviders.Embedded.dll
+/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/bin/Debug/net7.0/Microsoft.Extensions.Identity.Core.dll
+/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/bin/Debug/net7.0/Microsoft.Extensions.Identity.Stores.dll
+/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/bin/Debug/net7.0/Microsoft.Extensions.Options.dll
+/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/obj/Debug/net7.0/MUSCAttendance.MvcApplicationPartsAssemblyInfo.cs
