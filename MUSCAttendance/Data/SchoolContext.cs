@@ -2,12 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MUSCAttendance.Models;
 
 namespace MUSCAttendance.Data
 {
-    public class SchoolContext : DbContext
+    public class SchoolContext : IdentityDbContext<IdentityUser> 
     {
         public SchoolContext (DbContextOptions<SchoolContext> options)
             : base(options)
@@ -19,6 +21,7 @@ namespace MUSCAttendance.Data
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Form>().ToTable(nameof(Form));
         modelBuilder.Entity<Student>().ToTable(nameof(Student));
       
