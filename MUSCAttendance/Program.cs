@@ -7,7 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<SchoolContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("SchoolContextSQLite") ?? throw new InvalidOperationException("Connection string 'SchoolContext' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING") ?? throw new InvalidOperationException("Connection string 'SchoolContext' not found.")));
+builder.Services.AddStackExchangeRedisCache(options => {
+    options.Configuration = builder.Configuration["AZURE_REDIS_CONNECTIONSTRING"];
+    options.InstanceName = "SampleInstance";
+})
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<SchoolContext>();
 
