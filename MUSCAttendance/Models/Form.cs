@@ -11,6 +11,7 @@ namespace MUSCAttendance.Models
     public class Form
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
         public Student Student { get; set; }
