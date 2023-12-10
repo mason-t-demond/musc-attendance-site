@@ -95,3 +95,11 @@ dd {
   padding: 4px;
   min-height: 3em;
 }
+
+.btn {
+  color: #fff !important;
+  background-color: rgb(255, 127, 50);
+  border-color: rgb(226, 110, 38);
+}
+.btn:hover {background-color: rgb(226, 110, 38);  border-color: rgb(234, 118, 45);
+}

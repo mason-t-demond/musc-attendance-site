@@ -31,7 +31,11 @@ namespace MUSCAttendance.Pages.Forms
 
             Student = (Student)studentsIQ.Where(s => s.StudentID.ToString().Contains(searchString));
 
-            Form = Student.Forms;
+            if (Student == null) {
+                Form = await _context.Forms.ToListAsync();
+            } else {
+                Form = Student.Forms;
+            }
         }
     }
 }
