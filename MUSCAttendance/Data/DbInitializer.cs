@@ -115,6 +115,7 @@ namespace MUSCAttendance.Data
 
             context.Forms.AddRange(forms);
             context.SaveChanges();
+            // hello there
         }
     }
 }
