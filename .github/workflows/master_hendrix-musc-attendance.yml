@@ -31,6 +31,7 @@ jobs:
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        working-directory: MUSCAttendance
 
       - name: Entity Framework Core tool installation
         run: dotnet tool install -g dotnet-ef --version 7.0.14
