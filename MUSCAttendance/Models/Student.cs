@@ -6,6 +6,7 @@ namespace MUSCAttendance.Models
     public class Student
     {
         [Display(Name = "Hendrix ID")]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [Display(Name = "Last Name")]
