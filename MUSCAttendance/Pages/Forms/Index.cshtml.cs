@@ -19,11 +19,19 @@ namespace MUSCAttendance.Pages.Forms
             _context = context;
         }
 
+        public string SearchID { get; set; }
         public IList<Form> Form { get;set; } = default!;
+        public Student Student{get;set;}
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string searchString)
         {
-            Form = await _context.Forms.ToListAsync();
+            IQueryable<Student> studentsIQ =  _context.Students
+            .Include(s => s.StudentID)
+            .AsNoTracking();
+
+            Student = (Student)studentsIQ.Where(s => s.StudentID.ToString().Contains(searchString));
+
+            Form = Student.Forms;
         }
     }
 }
