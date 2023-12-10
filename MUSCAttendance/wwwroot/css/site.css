@@ -76,6 +76,10 @@ a:hover{color: rgb(53, 156, 177)}
 
 }
 
+.logout {
+  background-color: rgb(255, 127, 50);
+}
+
 dl {
   display: flex;
   flex-flow: column wrap;

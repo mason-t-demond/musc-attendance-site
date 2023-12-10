@@ -2,7 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MUSCAttendance.Data;
 using Microsoft.AspNetCore.Identity;
+
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddRazorPages();
