@@ -56,10 +56,10 @@ thead {
 
 .btn {
   color: #fff;
-  background-color: rgb(62, 177, 200);
-  border-color: rgb(55, 166, 188);
+  background-color: rgb(255, 127, 50);
+  border-color: rgb(226, 110, 38);
 }
-.btn:hover {background-color: rgb(55, 166, 188);  border-color: rgb(55, 166, 188);
+.btn:hover {background-color: rgb(226, 110, 38);  border-color: rgb(226, 110, 38);
 }
 
 a {
@@ -73,12 +73,9 @@ a:hover{color: rgb(53, 156, 177)}
 }
 .site-header a {
   color: white !important;
-
 }
 
-.logout {
-  background-color: rgb(255, 127, 50);
-}
+
 
 dl {
   display: flex;
