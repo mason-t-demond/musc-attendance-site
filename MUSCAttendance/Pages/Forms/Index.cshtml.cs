@@ -29,6 +29,8 @@ namespace MUSCAttendance.Pages.Forms
             .Include(s => s.StudentID)
             .AsNoTracking();
 
+            searchString = SearchID;
+
             Student = (Student)studentsIQ.Where(s => s.StudentID.ToString().Contains(searchString));
 
             if (Student == null) {
