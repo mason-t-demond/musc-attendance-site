@@ -16,14 +16,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Move
+        run: cd MUSCAttendance
+
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '7.x'
           include-prerelease: true
-      
-      - name: move
-        run: cd MUSCAttendance
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
