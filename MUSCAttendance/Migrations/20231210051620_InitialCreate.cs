@@ -56,6 +56,7 @@ namespace MUSCAttendance.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    StudentID = table.Column<int>(type: "int", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FirstMidName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     GradYear = table.Column<int>(type: "int", nullable: false)

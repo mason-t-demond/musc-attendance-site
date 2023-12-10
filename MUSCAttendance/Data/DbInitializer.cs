@@ -12,14 +12,14 @@ namespace MUSCAttendance.Data
                 return;   // DB has been seeded
             }
 
-            var elliot = new Student{ID=576981,FirstMidName="Elliot",LastName="Allen",GradYear=2025, Forms={}};
-            var mason = new Student{ID=576982,FirstMidName="Mason",LastName="Mason",GradYear=2023, Forms={}};
-            var ryan = new Student{ID=576985,FirstMidName="Ryan",LastName="Fuller",GradYear=2024, Forms={}};
-            var arturo = new Student{ID=576983,FirstMidName="Arturo",LastName="Anand",GradYear=2024, Forms={}};
-            var gytis = new Student{ID=576984,FirstMidName="Gytis",LastName="Barzdukas",GradYear=2025, Forms={}};
-            var peggy = new Student{ID=576986,FirstMidName="Peggy",LastName="Justice",GradYear=2023, Forms={}};
-            var laura = new Student{ID=576987,FirstMidName="Laura",LastName="Norman",GradYear=2025, Forms={}};
-            var nino = new Student{ID=576988,FirstMidName="Nino",LastName="Olivetto",GradYear=2026, Forms={}};
+            var elliot = new Student{StudentID=576981,FirstMidName="Elliot",LastName="Allen",GradYear=2025, Forms={}};
+            var mason = new Student{StudentID=576982,FirstMidName="Mason",LastName="Mason",GradYear=2023, Forms={}};
+            var ryan = new Student{StudentID=576985,FirstMidName="Ryan",LastName="Fuller",GradYear=2024, Forms={}};
+            var arturo = new Student{StudentID=576983,FirstMidName="Arturo",LastName="Anand",GradYear=2024, Forms={}};
+            var gytis = new Student{StudentID=576984,FirstMidName="Gytis",LastName="Barzdukas",GradYear=2025, Forms={}};
+            var peggy = new Student{StudentID=576986,FirstMidName="Peggy",LastName="Justice",GradYear=2023, Forms={}};
+            var laura = new Student{StudentID=576987,FirstMidName="Laura",LastName="Norman",GradYear=2025, Forms={}};
+            var nino = new Student{StudentID=576988,FirstMidName="Nino",LastName="Olivetto",GradYear=2026, Forms={}};
 
             var students = new Student[]
             {

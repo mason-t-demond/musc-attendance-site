@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MUSCAttendance.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20231210044117_InitialCreate")]
+    [Migration("20231210051620_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -80,6 +80,9 @@ namespace MUSCAttendance.Migrations
 
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StudentID")
+                        .HasColumnType("int");
 
                     b.HasKey("ID");
 
