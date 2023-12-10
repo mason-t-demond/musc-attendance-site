@@ -27,9 +27,11 @@ jobs:
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
+        working-directory: MUSCAttendance
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        working-directory: MUSCAttendance
       
       - name: EF
         run: dotnet tool install -g dotnet-ef --version 7.0.14
