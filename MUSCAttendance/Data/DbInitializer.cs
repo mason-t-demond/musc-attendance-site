@@ -6,7 +6,7 @@ namespace MUSCAttendance.Data
     {
         public static void Initialize(SchoolContext context)
         {
-            Look for any students.
+            // Look for any students.
             if (context.Students.Any())
             {
                 return;   // DB has been seeded
