@@ -36,7 +36,7 @@ namespace MUSCAttendance.Pages.Students
     if (await TryUpdateModelAsync<Student>(
         emptyStudent,
         "student",   // Prefix for form value.
-        s => s.FirstMidName, s => s.LastName, s => s.GradYear))
+        s => s.StudentID, s => s.FirstMidName, s => s.LastName, s => s.GradYear))
     {
         _context.Students.Add(emptyStudent);
         await _context.SaveChangesAsync();

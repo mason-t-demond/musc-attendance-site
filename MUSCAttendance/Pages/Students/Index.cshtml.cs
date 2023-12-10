@@ -27,7 +27,7 @@ namespace MUSCAttendance.Pages.Students
         public string CurrentFilter { get; set; }
         public string CurrentSort { get; set; }
 
-        public PaginatedList<Student> Students { get; set; }
+        public IList<Student> Students { get;set; } = default!;
 
         public async Task OnGetAsync(string sortOrder,
             string currentFilter, string searchString, int? pageIndex)
@@ -79,9 +79,9 @@ namespace MUSCAttendance.Pages.Students
                     break;
             }
 
-            var pageSize = Configuration.GetValue("PageSize", 4);
-            Students = await PaginatedList<Student>.CreateAsync(
-                studentsIQ.AsNoTracking(), pageIndex ?? 1, pageSize);
+            Students = await _context.Students.ToListAsync();
+
+
         }
     }
 }
