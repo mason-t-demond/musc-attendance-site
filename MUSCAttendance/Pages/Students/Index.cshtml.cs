@@ -79,7 +79,7 @@ namespace MUSCAttendance.Pages.Students
                     break;
             }
 
-            Students = await _context.Students.ToListAsync();
+            Students = await studentsIQ.ToListAsync();
 
 
         }
