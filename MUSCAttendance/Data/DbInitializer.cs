@@ -7,10 +7,10 @@ namespace MUSCAttendance.Data
         public static void Initialize(SchoolContext context)
         {
             // Look for any students.
-            if (context.Students.Any())
-            {
-                return;   // DB has been seeded
-            }
+            // if (context.Students.Any())
+            // {
+            //     return;   // DB has been seeded
+            // }
 
             var elliot = new Student{ID=576981,FirstMidName="Elliot",LastName="Allen",GradYear=2025, Forms={}};
             var mason = new Student{ID=576982,FirstMidName="Mason",LastName="Mason",GradYear=2023, Forms={}};
