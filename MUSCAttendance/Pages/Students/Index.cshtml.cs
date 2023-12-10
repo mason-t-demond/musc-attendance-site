@@ -54,7 +54,7 @@ namespace MUSCAttendance.Pages.Students
             {
                 studentsIQ = studentsIQ.Where(s => s.LastName.Contains(searchString)
                                        || s.FirstMidName.Contains(searchString)
-                                       || s.ID.ToString().Contains(searchString));
+                                       || s.StudentID.ToString().Contains(searchString));
             }
             switch (sortOrder)
             {

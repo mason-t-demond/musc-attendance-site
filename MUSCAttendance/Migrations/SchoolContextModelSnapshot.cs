@@ -78,6 +78,9 @@ namespace MUSCAttendance.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StudentID")
+                        .HasColumnType("int");
+
                     b.HasKey("ID");
 
                     b.ToTable("Student", (string)null);
