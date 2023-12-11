@@ -22,6 +22,7 @@ namespace MUSCAttendance.Pages.Forms
         public string SearchID { get; set; }
         public IList<Form> Form { get;set; } = default!;
         public string StudentId { get; set; }
+        public Student Student {get;set;}
 
 
         public async Task OnGetAsync(string studentId)
@@ -32,6 +33,7 @@ namespace MUSCAttendance.Pages.Forms
                 Form = await _context.Forms
                     .Where(f => f.Student.StudentID.ToString() == studentId)
                     .ToListAsync();
+                Student = (Student)_context.Students.Where(s => s.StudentID.ToString() == studentId);
             }
             else
             {
