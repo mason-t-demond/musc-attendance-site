@@ -26,18 +26,24 @@
                 <span asp-validation-for="Form.EventDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Form.Type" class="control-label"></label>
-                <select asp-for="Form.Type" class="form-control" id="eventType" multiple>
-                    <optgroup>
-                        <option value="Hendrix">HDX</option>
-                        <option value="UCA">UCA</option>
-                        <option value="Other">Other</option>
-                    </optgroup>
-                </select>
+                <label asp-for="Form.Type" class="control-label">Event Type</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Form.Type" value="Hendrix" />
+                    <label class="form-check-label">HDX</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Form.Type" value="UCA" />
+                    <label class="form-check-label">UCA</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Form.Type" value="Other" />
+                    <label class="form-check-label">Other</label>
+                </div>
                 <span asp-validation-for="Form.Type" class="text-danger"></span>
             </div>
 
-            <div class="form-group" id="otherDescriptionGroup" style="display: none;">
+
+            <div class="form-group" id="otherDescriptionGroup">
                 <label asp-for="Form.OtherDescription" class="control-label"></label>
                 <input asp-for="Form.OtherDescription" class="form-control" />
                 <span asp-validation-for="Form.OtherDescription" class="text-danger"></span>
@@ -58,23 +64,23 @@
 
             <div class="form-group">
                 <label class="control-label">@Html.DisplayNameFor(model => model.Form.HasProgram)</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" asp-for="Form.HasProgram" value="true" />
-                    <label class="form-check-label">Yes</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" asp-for="Form.HasProgram" value="false" />
-                    <label class="form-check-label">No</label>
+             <div class="form-check">
+                <input class="form-check-input" type="radio" asp-for="Form.HasProgram" value="true" id="hasProgramYes" />
+                <label class="form-check-label">Yes</label>
+             </div>
+             <div class="form-check">
+                <input class="form-check-input" type="radio" asp-for="Form.HasProgram" value="false" id="hasProgramNo" />
+                <label class="form-check-label">No</label>
              </div>
                 <span asp-validation-for="Form.HasProgram" class="text-danger"></span>
             </div>
-            
-            
-            <div class="form-group">
+
+            <div class="form-group" id="programDescriptionGroup" style="display: none;">
                 <label asp-for="Form.ProgramDescription" class="control-label"></label>
                 <input asp-for="Form.ProgramDescription" class="form-control" />
                 <span asp-validation-for="Form.ProgramDescription" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -96,6 +102,18 @@
                 $('#otherDescriptionGroup').hide();
             }
         });
+
+        $('#hasProgramYes, #hasProgramNo').change(function () {
+            // Check if the "Yes" radio button is selected
+            if ($('#hasProgramYes').prop('checked')) {
+                // If selected, hide the ProgramDescription field
+                $('#programDescriptionGroup').hide();
+            } else {
+                // If "No" is selected, show the ProgramDescription field
+                $('#programDescriptionGroup').show();
+            }
+        });
+        
     });
 </script>
 
