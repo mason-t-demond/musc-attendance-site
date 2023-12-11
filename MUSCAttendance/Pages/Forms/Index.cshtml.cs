@@ -55,11 +55,9 @@ namespace MUSCAttendance.Pages.Forms
             UCACount = Form.Count(f => f.Type.ToString() == "UCA");
             OtherCount = Form.Count(f => f.Type.ToString() == "Other");
 
-            // Only count up to 10 forms where Performed is true
-            PerformedCount = Form.Count(f => f.Performed);
 
 
             // Sum the counts
-            TotalAttendances = HendrixCount + Math.Min(UCACount, 10) + Math.Min(OtherCount, 10) + PerformedCount;
+            TotalAttendances = HendrixCount + Math.Min(UCACount, 10) + Math.Min(OtherCount, 10);
     }
 }}
