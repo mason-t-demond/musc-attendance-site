@@ -75,7 +75,7 @@
                 <span asp-validation-for="Form.HasProgram" class="text-danger"></span>
             </div>
 
-            <div class="form-group" id="programDescriptionGroup" style="display: none;">
+            <div class="form-group" id="programDescriptionGroup">
                 <label asp-for="Form.ProgramDescription" class="control-label"></label>
                 <input asp-for="Form.ProgramDescription" class="form-control" />
                 <span asp-validation-for="Form.ProgramDescription" class="text-danger"></span>
@@ -93,36 +93,6 @@
 </div>
 
 
-<script>
-    $(document).ready(function () {
-        $("#otherDescriptionGroup").hide();
-        $('#programDescriptionGroup').hide();
-
-
-        // Handle radio button change event
-        $("input[name='Form.Type']").change(function () {
-            if ($(this).val() === "Other") {
-                // If "Other" is selected, show the OtherDescription input
-                $("#otherDescriptionGroup").show();
-            } else {
-                // If a different option is selected, hide the OtherDescription input
-                $("#otherDescriptionGroup").hide();
-            }
-        });
-
-        $('#hasProgramNo').change(function () {
-            // Check if the "Yes" radio button is selected
-            if ($('#hasProgramNo').prop('checked')) {
-                // If selected, hide the ProgramDescription field
-                $('#programDescriptionGroup').show();
-            } else {
-                // If "No" is selected, show the ProgramDescription field
-                $('#programDescriptionGroup').hide();
-            }
-        });
-        
-    });
-</script>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
