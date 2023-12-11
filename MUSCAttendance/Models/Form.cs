@@ -37,6 +37,7 @@ namespace MUSCAttendance.Models
         [Display(Name = "Event Description")]
         public string? ProgramDescription { get; set; }
 
+        [Display(Name = "Approved")]
         public bool Approved { get; set; }
     }
 }

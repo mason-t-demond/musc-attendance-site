@@ -53,11 +53,11 @@ namespace MUSCAttendance.Pages.Forms
             if (form != null)
             {
                 Form = form;
-                _context.Forms.Remove(Form);
+                Form.Approved = true;
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Index", form.Student.ID);
         }
     }
 }

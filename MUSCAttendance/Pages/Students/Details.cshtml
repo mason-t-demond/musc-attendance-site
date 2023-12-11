@@ -20,19 +20,19 @@
             Hendrix events
         </dt>
         <dd >
-            0
+             @Html.DisplayFor(model => model.HendrixCount)
         </dd>
         <dt >
             UCA events
         </dt>
         <dd >
-            0
+            @Html.DisplayFor(model => model.UCACount)
         </dd>
         <dt >
             Other events
         </dt>
         <dd >
-            0
+            @Html.DisplayFor(model => model.OtherCount)
         </dd>
     </dl>
 </div>
@@ -46,13 +46,13 @@
       <table class="table">
     <thead>
         <tr>
-            <th>Event Date</th>
-            <th>Event Location</th>
-            <th>Performed</th>
-            <th>Program?</th>
-            <th>OtherDescription</th>
-            <th>Description</th>
-            <th>Approved</th>
+            <th>@Html.DisplayNameFor(model => model.Student.Forms[0].EventDate)</th>
+            <th>@Html.DisplayNameFor(model => model.Student.Forms[0].Type)</th>
+            <th>@Html.DisplayNameFor(model => model.Student.Forms[0].Performed)</th>
+            <th>@Html.DisplayNameFor(model => model.Student.Forms[0].HasProgram)</th>
+            <th>@Html.DisplayNameFor(model => model.Student.Forms[0].OtherDescription)</th>
+            <th>@Html.DisplayNameFor(model => model.Student.Forms[0].ProgramDescription)</th>
+            <th>@Html.DisplayNameFor(model => model.Student.Forms[0].Approved)</th>
         </tr>
     </thead>
     <tbody>
@@ -82,14 +82,7 @@
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="../Forms/Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="../Forms/Delete" asp-route-id="@item.ID">Delete</a>
-                @if (!item.Approved)
-                {
-                    <form id="approveForm-@item.ID" method="post">
-                        <input type="hidden" name="id" value="@item.ID" />
-                        <a href="#" class="btn btn-primary" onclick="approveItem('@item.ID')">Approve</a>
-                    </form>
-                }
+                <a asp-page="../Forms/Delete" asp-route-id="@item.ID">Approve</a>
 
             </td>
         </tr>
@@ -102,25 +95,4 @@
     <a asp-page="./Index">Back to List</a>
 </div>
 
-<script>
-    function approveItem(itemId) {
-        // Make an AJAX request to your controller method
-        $.ajax({
-            type: "POST",
-            url: "/Students/Details/OnPostAsync",
-            data: { id: itemId },
-            success: function (data) {
-                // Handle success if needed
-                console.log("Item approved successfully");
-                
-                // If you want to redirect after approval, you can use window.location
-                // window.location.href = "/Students/Details?id=" + itemId;
-            },
-            error: function () {
-                // Handle error if needed
-                console.log("Error approving item");
-            }
-        });
-    }
-</script>
 

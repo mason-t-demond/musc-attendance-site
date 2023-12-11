@@ -29,7 +29,6 @@ namespace MUSCAttendance.Pages.Forms
         public int HendrixCount { get; set; }
         public int UCACount { get; set; }
         public int OtherCount { get; set; }
-        public int PerformedCount { get; set; }
 
         public float AttendanceProgress { get; set; }
 
@@ -48,7 +47,6 @@ namespace MUSCAttendance.Pages.Forms
             }
             else
             {
-                // If no student ID provided, retrieve all forms
                 Form = await _context.Forms.ToListAsync();
             }
 
