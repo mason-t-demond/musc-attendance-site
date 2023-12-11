@@ -21,22 +21,22 @@ namespace MUSCAttendance.Pages.Forms
 
         public string SearchID { get; set; }
         public IList<Form> Form { get;set; } = default!;
-        public Student Student{get;set;}
+        public string StudentId { get; set; }
 
-        public async Task OnGetAsync(string searchString)
+
+        public async Task OnGetAsync(string studentId)
         {
-            IQueryable<Student> studentsIQ =  _context.Students
-            .Include(s => s.StudentID)
-            .AsNoTracking();
-
-            searchString = SearchID;
-
-            Student = (Student)studentsIQ.Where(s => s.StudentID.ToString().Contains(searchString));
-
-            if (Student == null) {
+            // If a student ID is provided, filter forms by that ID
+            if (!string.IsNullOrEmpty(studentId))
+            {
+                Form = await _context.Forms
+                    .Where(f => f.Student.StudentID.ToString() == studentId)
+                    .ToListAsync();
+            }
+            else
+            {
+                // If no student ID provided, retrieve all forms
                 Form = await _context.Forms.ToListAsync();
-            } else {
-                Form = Student.Forms;
             }
         }
     }
