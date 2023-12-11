@@ -27,5 +27,15 @@ $(document).ready(function () {
             $('#programDescriptionGroup').hide();
         } 
     });
+
+
+    function approveItem(itemId) {
+        $.ajax({
+            type: "POST",
+            url: "/Details/OnPostAsync",
+            data: { id: itemId }
+        });
+    }
+
     
 });

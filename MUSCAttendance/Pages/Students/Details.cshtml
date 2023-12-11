@@ -84,11 +84,13 @@
                 <a asp-page="../Forms/Details" asp-route-id="@item.ID">Details</a> |
                 <a asp-page="../Forms/Delete" asp-route-id="@item.ID">Delete</a>
                 @if (!item.Approved)
-                    {
-                        <form method="post">
-                            <button type="submit"  class="btn btn-primary">Approve</button>
-                        </form>
-                    }
+                {
+                    <form id="approveForm-@item.ID" method="post">
+                        <input type="hidden" name="id" value="@item.ID" />
+                        <a href="#" class="btn btn-primary" onclick="approveItem('@item.ID')">Approve</a>
+                    </form>
+                }
+
             </td>
         </tr>
 }
