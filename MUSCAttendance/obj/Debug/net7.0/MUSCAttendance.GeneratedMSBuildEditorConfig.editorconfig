@@ -9,107 +9,107 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MUSCAttendance
 build_property.RootNamespace = MUSCAttendance
-build_property.ProjectDir = /Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/
+build_property.ProjectDir = C:\Users\MrMcQuinn\Documents\School\Comp Sci\340\musc-attendance-site\MUSCAttendance\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance
+build_property.MSBuildProjectDirectory = C:\Users\MrMcQuinn\Documents\School\Comp Sci\340\musc-attendance-site\MUSCAttendance
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/Account/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/Account/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/Account/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9fVmlld0ltcG9ydHMuY3NodG1s
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Forms/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRm9ybXMvQ3JlYXRlLmNzaHRtbA==
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Forms/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Forms/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRm9ybXMvRGVsZXRlLmNzaHRtbA==
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Forms/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Forms/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRm9ybXMvRGV0YWlscy5jc2h0bWw=
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Forms/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Forms/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRm9ybXMvRWRpdC5jc2h0bWw=
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Forms/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Forms/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRm9ybXMvSW5kZXguY3NodG1s
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Forms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Shared/_LoginPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Students/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3R1ZGVudHMvQ3JlYXRlLmNzaHRtbA==
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Students/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Students/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3R1ZGVudHMvRGVsZXRlLmNzaHRtbA==
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Students/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Students/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3R1ZGVudHMvRGV0YWlscy5jc2h0bWw=
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Students/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Students/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3R1ZGVudHMvRWRpdC5jc2h0bWw=
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Students/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Students/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3R1ZGVudHMvSW5kZXguY3NodG1s
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Students/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ryanfuller/Documents/Hendrix 23 24/Databases and Web Systems/musc-attendance-site/MUSCAttendance/Pages/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-as84d40x0k
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-k44ugih68h

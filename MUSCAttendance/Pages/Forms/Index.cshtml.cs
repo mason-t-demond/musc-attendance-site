@@ -30,8 +30,6 @@ namespace MUSCAttendance.Pages.Forms
         public int UCACount { get; set; }
         public int OtherCount { get; set; }
 
-        public float AttendanceProgress { get; set; }
-
 
         public async Task OnGetAsync(string studentId)
         {
@@ -59,7 +57,5 @@ namespace MUSCAttendance.Pages.Forms
 
             // Sum the counts
             TotalAttendances = HendrixCount + Math.Min(UCACount, 10) + Math.Min(OtherCount, 10);
-
-            AttendanceProgress = TotalAttendances / 35;
     }
 }}
