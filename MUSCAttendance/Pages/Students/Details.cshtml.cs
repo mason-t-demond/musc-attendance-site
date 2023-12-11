@@ -18,6 +18,11 @@ namespace MUSCAttendance.Pages.Students
 
         public Student Student { get; set; }
 
+        public int TotalAttendances { get; set; }
+        public int HendrixCount { get; set; }
+        public int UCACount { get; set; }
+        public int OtherCount { get; set; }
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
@@ -29,6 +34,15 @@ namespace MUSCAttendance.Pages.Students
                 .Include(s => s.Forms)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.ID == id);
+
+            HendrixCount = Student.Forms.Count(f => f.Type.ToString() == "Hendrix");
+            UCACount = Student.Forms.Count(f => f.Type.ToString() == "UCA");
+            OtherCount = Student.Forms.Count(f => f.Type.ToString() == "Other");
+
+
+
+            // Sum the counts
+            TotalAttendances = HendrixCount + Math.Min(UCACount, 10) + Math.Min(OtherCount, 10);
 
             if (Student == null)
             {
