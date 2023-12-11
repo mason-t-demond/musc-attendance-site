@@ -25,22 +25,32 @@ namespace MUSCAttendance.Pages.Forms
         public Student Student {get;set;}
 
 
+
+        public int HendrixCount { get; set; }
+        public int UCACount { get; set; }
+        public int OtherCount { get; set; }
+
+
         public async Task OnGetAsync(string studentId)
         {
             // If a student ID is provided, filter forms by that ID
             if (!string.IsNullOrEmpty(studentId))
             {
-                Form = await _context.Forms
-                    .Where(f => f.Student.StudentID.ToString() == studentId)
-                    .ToListAsync();
                 Student = await _context.Students
                     .Where(s => s.StudentID.ToString() == studentId)
                     .FirstOrDefaultAsync();
+                
+                Form = Student.Forms;
             }
             else
             {
                 // If no student ID provided, retrieve all forms
                 Form = await _context.Forms.ToListAsync();
+            }
+            
+            HendrixCount = Form.Count(f => f.Type.ToString() == "Hendrix");
+            UCACount = Form.Count(f => f.Type.ToString() == "UCA");
+            OtherCount = Form.Count(f => f.Type.ToString() == "Other");
         }
     }
-}}
+}
