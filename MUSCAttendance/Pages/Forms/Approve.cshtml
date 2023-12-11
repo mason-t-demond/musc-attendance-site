@@ -1,0 +1,63 @@
+@page
+@model MUSCAttendance.Pages.Forms.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Approve</h1>
+
+<div>
+    <h4>Attendance</h4>
+    <hr />
+    <dl >
+        <dt >
+            @Html.DisplayNameFor(model => model.Form.EventDate)
+        </dt>
+        <dd >
+            @Html.DisplayFor(model => model.Form.EventDate)
+        </dd>
+        <dt >
+            @Html.DisplayNameFor(model => model.Form.Type)
+        </dt>
+        <dd >
+            @Html.DisplayFor(model => model.Form.Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Form.Performed)
+        </dt>
+        <dd >
+            @Html.DisplayFor(model => model.Form.Performed)
+        </dd>
+        <dt >
+            @Html.DisplayNameFor(model => model.Form.HasProgram)
+        </dt>
+        <dd >
+            @Html.DisplayFor(model => model.Form.HasProgram)
+        </dd>
+        <dt >
+            @Html.DisplayNameFor(model => model.Form.OtherDescription)
+        </dt>
+        <dd >
+            @Html.DisplayFor(model => model.Form.OtherDescription)
+        </dd>
+        <dt >
+            @Html.DisplayNameFor(model => model.Form.ProgramDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Form.ProgramDescription)
+        </dd>
+        <dt >
+            @Html.DisplayNameFor(model => model.Form.Approved)
+        </dt>
+        <dd >
+            @Html.DisplayFor(model => model.Form.Approved)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Form.ID" />
+        <input type="submit" value="Approve" class="btn btn-danger" /> |
+        <a asp-page="../Student/Details" asp-route-id="Form.Student.ID">Back to Student</a>
+    </form>
+</div>
