@@ -142,7 +142,7 @@ namespace MUSCAttendance.Areas.Identity.Pages.Account
                     else
                     {
                         await _signInManager.SignInAsync(user, isPersistent: false);
-                        return RedirectToPage("../Pages/Students/Create");
+                        return RedirectToPage(".../Pages/Students/Create");
                     }
 
                 }
