@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -12,31 +9,47 @@ namespace MUSCAttendance.Pages.Students
 {
     public class DetailsModel : PageModel
     {
-        private readonly MUSCAttendance.Data.SchoolContext _context;
+        private readonly SchoolContext _context;
 
-        public DetailsModel(MUSCAttendance.Data.SchoolContext context)
+        public DetailsModel(SchoolContext context)
         {
             _context = context;
         }
 
-      public Student Student { get; set; }
+        public Student Student { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
-{
-    if (id == null)
-    {
-        return NotFound();
-    }
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-Student = await _context.Students
-        .Include(s => s.Forms)
-        .AsNoTracking()
-        .FirstOrDefaultAsync(m => m.ID == id);
-    if (Student == null)
-    {
-        return NotFound();
-    }
-    return Page();
-}
+            Student = await _context.Students
+                .Include(s => s.Forms)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.ID == id);
+
+            if (Student == null)
+            {
+                return NotFound();
+            }
+
+            return Page();
+        }
+
+        public IActionResult OnPostApprove(int id)
+        {
+            var formToApprove = _context.Forms.FirstOrDefault(f => f.ID == id);
+
+            if (formToApprove != null)
+            {
+                formToApprove.Approved = true;
+                _context.SaveChanges();
+                return RedirectToPage(new { id });
+            }
+
+            return NotFound();
+        }
     }
 }

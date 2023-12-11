@@ -82,8 +82,13 @@
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="../Forms/Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="../Forms/Approve" asp-route-id="@item.ID">Approve</a> |
                 <a asp-page="../Forms/Delete" asp-route-id="@item.ID">Delete</a>
+                @if (!item.Approved)
+                    {
+                        <form method="post" asp-page-handler="Approve" asp-route-id="@item.ID">
+                            <button type="submit">Approve</button>
+                        </form>
+                    }
             </td>
         </tr>
 }
