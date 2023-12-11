@@ -38,10 +38,10 @@ namespace MUSCAttendance.Pages.Students
             return Page();
         }
 
-        public IActionResult OnPostApprove(int id)
+        public async Task<IActionResult> OnPostAsync(int id)
         {
             
-            var formToApprove = _context.Forms.FirstOrDefault(f => f.ID == id);
+            var formToApprove = await _context.Forms.FirstOrDefaultAsync(f => f.ID == id);
 
             if (formToApprove != null)
             {
