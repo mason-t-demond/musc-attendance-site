@@ -46,7 +46,7 @@ namespace MUSCAttendance.Pages.Forms
             else
             {
                 Form = await _context.Forms.ToListAsync();
-        }
+            }
 
 
             HendrixCount = Form.Count(f => f.Type.ToString() == "Hendrix");

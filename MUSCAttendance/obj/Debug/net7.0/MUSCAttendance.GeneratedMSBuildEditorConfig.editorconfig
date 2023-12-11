@@ -9,12 +9,17 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MUSCAttendance
 build_property.RootNamespace = MUSCAttendance
+<<<<<<< HEAD
 build_property.ProjectDir = /Users/elliot/Desktop/WebSystems/musc-attendance-site/MUSCAttendance/
+=======
+build_property.ProjectDir = C:\Users\MrMcQuinn\Documents\School\Comp Sci\340\musc-attendance-site\MUSCAttendance\
+>>>>>>> 23a8e3c15787719a4409a36388787382cfeac3d1
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+<<<<<<< HEAD
 build_property.MSBuildProjectDirectory = /Users/elliot/Desktop/WebSystems/musc-attendance-site/MUSCAttendance
 build_property._RazorSourceGeneratorDebug = 
 
@@ -113,3 +118,103 @@ build_metadata.AdditionalFiles.CssScope =
 [/Users/elliot/Desktop/WebSystems/musc-attendance-site/MUSCAttendance/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-as84d40x0k
+=======
+build_property.MSBuildProjectDirectory = C:\Users\MrMcQuinn\Documents\School\Comp Sci\340\musc-attendance-site\MUSCAttendance
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Forms/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Forms/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Forms/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Forms/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Forms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Students/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Students/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Students/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Students/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Students/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MrMcQuinn/Documents/School/Comp Sci/340/musc-attendance-site/MUSCAttendance/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-k44ugih68h
+>>>>>>> 23a8e3c15787719a4409a36388787382cfeac3d1
