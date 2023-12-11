@@ -33,7 +33,9 @@ namespace MUSCAttendance.Pages.Forms
                 Form = await _context.Forms
                     .Where(f => f.Student.StudentID.ToString() == studentId)
                     .ToListAsync();
-                Student = (Student)_context.Students.Where(s => s.StudentID.ToString() == studentId);
+                Student = await _context.Students
+                    .Where(s => s.StudentID.ToString() == studentId)
+                    .FirstOrDefaultAsync();
             }
             else
             {
