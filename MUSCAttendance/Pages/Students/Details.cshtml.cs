@@ -40,6 +40,7 @@ namespace MUSCAttendance.Pages.Students
 
         public IActionResult OnPostApprove(int id)
         {
+            
             var formToApprove = _context.Forms.FirstOrDefault(f => f.ID == id);
 
             if (formToApprove != null)
