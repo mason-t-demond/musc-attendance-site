@@ -27,10 +27,8 @@ namespace MUSCAttendance.Pages.Forms
 
         [BindProperty]
         public Form Form { get; set; } = default!;
-
+        [BindProperty]
         public string StudentId { get; set; }
-        public Student Student { get; set; }
-
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -40,14 +38,25 @@ namespace MUSCAttendance.Pages.Forms
                 return Page();
             }
 
-            Student = await _context.Students
-                    .Where(s => s.StudentID.ToString() == StudentId)
-                    .FirstOrDefaultAsync();
+            // Find the student based on the provided StudentId
+            var student = await _context.Students
+                .Where(s => s.StudentID.ToString() == StudentId)
+                .FirstOrDefaultAsync();
+
+            if (student == null)
+            {
+                // Handle the case where the student is not found
+                ModelState.AddModelError(nameof(StudentId), "Student not found.");
+                return Page();
+            }
+
+            Form.Student = student;
             
-            Student.Forms.Add(Form);
+            student.Forms.Add(Form);
+
             _context.Forms.Add(Form);
             await _context.SaveChangesAsync();
-            
+
             return RedirectToPage("./Index");
         }
     }
