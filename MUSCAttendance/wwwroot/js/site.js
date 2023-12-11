@@ -27,23 +27,7 @@ $(document).ready(function () {
             $('#programDescriptionGroup').hide();
         } 
     });
-    function approveItem(itemId) {
-        $.ajax({
-            type: "POST",
-            url: "/Details/OnPostAsync",
-            data: { id: itemId },
-            success: function (data) {
-                console.log("Item approved successfully");
-                
-                // If you want to redirect after approval, you can use window.location
-                // window.location.href = "/Students/Details?id=" + itemId;
-            },
-            error: function () {
-                // Handle error if needed
-                console.log("Error approving item");
-            }
-        });
-    }
+    
 
     
 });

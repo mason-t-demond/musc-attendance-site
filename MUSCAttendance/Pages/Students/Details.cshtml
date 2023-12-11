@@ -101,3 +101,26 @@
     <a asp-page="./Edit" asp-route-id="@Model.Student.ID">Edit</a> |
     <a asp-page="./Index">Back to List</a>
 </div>
+
+<script>
+    function approveItem(itemId) {
+        // Make an AJAX request to your controller method
+        $.ajax({
+            type: "POST",
+            url: "/YourController/OnPostAsync",
+            data: { id: itemId },
+            success: function (data) {
+                // Handle success if needed
+                console.log("Item approved successfully");
+                
+                // If you want to redirect after approval, you can use window.location
+                // window.location.href = "/Students/Details?id=" + itemId;
+            },
+            error: function () {
+                // Handle error if needed
+                console.log("Error approving item");
+            }
+        });
+    }
+</script>
+
