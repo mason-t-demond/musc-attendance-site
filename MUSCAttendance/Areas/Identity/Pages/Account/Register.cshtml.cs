@@ -140,8 +140,8 @@ namespace MUSCAttendance.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
+                        return RedirectToPage("Pages/Students/Create");
+
                     }
                 }
                 foreach (var error in result.Errors)
