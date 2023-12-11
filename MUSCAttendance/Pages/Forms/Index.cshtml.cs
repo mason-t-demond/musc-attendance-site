@@ -20,7 +20,7 @@ namespace MUSCAttendance.Pages.Forms
         }
 
         public string SearchID { get; set; }
-        public IList<Form> Form { get;set; } = default!;
+        public IList<Form> Forms { get;set; } = default!;
         public string StudentId { get; set; }
         public Student Student {get;set;}
         
@@ -44,17 +44,18 @@ namespace MUSCAttendance.Pages.Forms
                     .Where(s => s.StudentID.ToString() == studentId)
                     .FirstOrDefaultAsync();
                 
-                Form = Student.Forms;
+                Forms = Student.Forms;
             }
             else
             {
                 // If no student ID provided, retrieve all forms
-                Form = await _context.Forms.ToListAsync();
+                Forms = await _context.Forms.ToListAsync();
             }
 
-            HendrixCount = Form.Count(f => f.Type.ToString() == "Hendrix");
-            UCACount = Form.Count(f => f.Type.ToString() == "UCA");
-            OtherCount = Form.Count(f => f.Type.ToString() == "Other");
+            HendrixCount = Forms.Count(f => f.Type.ToString() == "Hendrix");
+            UCACount = Forms.Count(f => f.Type.ToString() == "UCA");
+            OtherCount = Forms.Count(f => f.Type.ToString() == "Other");
+
         }
     }
 }

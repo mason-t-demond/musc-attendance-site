@@ -27,7 +27,7 @@
             Total Attendances
         </dt>
         <dd >
-            @Html.DisplayFor(model => model.Student.Forms.Count())
+            @Html.DisplayFor(model => model.Forms.Count())
         </dd>
         <dt >
             Hendrix events
@@ -71,7 +71,7 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Form) {
+@foreach (var item in Model.Forms) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.EventDate)
