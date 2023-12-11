@@ -105,14 +105,13 @@ dd {
 }
 
 .form-check-input {
-  /* Change the color to your desired color */
-  background-color: rgb(62, 177, 200);
   border-color: rgb(62, 177, 200);
-  color: #ffffff; /* Text color */
 }
 
-/* Style for the checked radio buttons */
 .form-check-input:checked {
   background-color: rgb(62, 177, 200);
   border-color: rgb(62, 177, 200);
+}
+.form-group {
+  margin-bottom: 15px
 }
