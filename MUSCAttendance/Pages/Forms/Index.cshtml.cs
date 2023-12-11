@@ -21,6 +21,7 @@ namespace MUSCAttendance.Pages.Forms
 
         public string SearchID { get; set; }
         public IList<Form> Form { get;set; } = default!;
+        public List<Student> Students {get;set;}
 
         public async Task OnGetAsync(string searchString)
         {
@@ -34,8 +35,8 @@ namespace MUSCAttendance.Pages.Forms
                 studentsIQ = studentsIQ.Where(s => s.StudentID.ToString().Contains(searchString));
             }
 
-            
-            foreach (var student in studentsIQ)
+            Students = await studentsIQ.ToList();
+            foreach (var student in Students)
             {
                 foreach (var form in student) {
                     Form.Add(form);
