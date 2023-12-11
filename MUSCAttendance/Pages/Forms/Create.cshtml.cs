@@ -27,6 +27,7 @@ namespace MUSCAttendance.Pages.Forms
 
         [BindProperty]
         public Form Form { get; set; } = default!;
+
         [BindProperty]
         public string StudentId { get; set; }
 
@@ -41,6 +42,7 @@ namespace MUSCAttendance.Pages.Forms
             // Find the student based on the provided StudentId
             var student = await _context.Students
                 .Where(s => s.StudentID.ToString() == StudentId)
+                .Include(s => s.Forms)
                 .FirstOrDefaultAsync();
 
             if (student == null)
@@ -51,7 +53,7 @@ namespace MUSCAttendance.Pages.Forms
             }
 
             Form.Student = student;
-            
+
             student.Forms.Add(Form);
 
             _context.Forms.Add(Form);
