@@ -27,8 +27,6 @@ $(document).ready(function () {
             $('#programDescriptionGroup').hide();
         } 
     });
-
-
     function approveItem(itemId) {
         $.ajax({
             type: "POST",
