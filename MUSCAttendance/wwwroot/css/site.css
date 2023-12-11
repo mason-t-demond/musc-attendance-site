@@ -115,3 +115,8 @@ dd {
 .form-group {
   margin-bottom: 15px
 }
+
+.form-control{
+  border-color: rgb(62, 177, 200);
+  box-shadow: rgb(62, 177, 200);
+}
