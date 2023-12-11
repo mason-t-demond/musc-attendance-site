@@ -27,14 +27,20 @@
             </div>
             <div class="form-group">
                 <label asp-for="Form.Type" class="control-label"></label>
-                <select asp-for="Form.Type" class="form-control" multiple>
-                    <optgroup label="Event Type">
+                <select asp-for="Form.Type" class="form-control" id="eventType" multiple>
+                    <optgroup>
                         <option value="Hendrix">HDX</option>
                         <option value="UCA">UCA</option>
                         <option value="Other">Other</option>
                     </optgroup>
                 </select>
                 <span asp-validation-for="Form.Type" class="text-danger"></span>
+            </div>
+
+            <div class="form-group" id="otherDescriptionGroup" style="display: none;">
+                <label asp-for="Form.OtherDescription" class="control-label"></label>
+                <input asp-for="Form.OtherDescription" class="form-control" />
+                <span asp-validation-for="Form.OtherDescription" class="text-danger"></span>
             </div>
 
             <div class="form-group">
@@ -63,11 +69,7 @@
                 <span asp-validation-for="Form.HasProgram" class="text-danger"></span>
             </div>
             
-            <div class="form-group">
-                <label asp-for="Form.OtherDescription" class="control-label"></label>
-                <input asp-for="Form.OtherDescription" class="form-control" />
-                <span asp-validation-for="Form.OtherDescription" class="text-danger"></span>
-            </div>
+            
             <div class="form-group">
                 <label asp-for="Form.ProgramDescription" class="control-label"></label>
                 <input asp-for="Form.ProgramDescription" class="form-control" />
@@ -83,6 +85,19 @@
 <div>
     <a asp-page="Index">Back to List</a>
 </div>
+
+
+<script>
+    $(document).ready(function () {
+        $('#eventType').change(function () {
+            if ($(this).val() === 'Other') {
+                $('#otherDescriptionGroup').show();
+            } else {
+                $('#otherDescriptionGroup').hide();
+            }
+        });
+    });
+</script>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
