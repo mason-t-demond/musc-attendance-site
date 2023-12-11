@@ -27,24 +27,42 @@
             </div>
             <div class="form-group">
                 <label asp-for="Form.Type" class="control-label"></label>
-                <select asp-for="Form.Type" class="form-control">
-                    <option value="null"> </option>
-                    <option value="Hendrix">HDX</option>
-                    <option value="UCA">UCA</option>
-                    <option value="Other">Other</option>
+                <select asp-for="Form.Type" class="form-control" multiple>
+                    <optgroup label="Event Type">
+                        <option value="Hendrix">HDX</option>
+                        <option value="UCA">UCA</option>
+                        <option value="Other">Other</option>
+                    </optgroup>
                 </select>
                 <span asp-validation-for="Form.Type" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Form.Performed" /> @Html.DisplayNameFor(model => model.Form.Performed)
-                </label>
+
+            <div class="form-group">
+                <label class="control-label">@Html.DisplayNameFor(model => model.Form.Performed)</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Form.Performed" value="true" />
+                    <label class="form-check-label">Yes</label>
+                </div>
+            <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Form.Performed" value="false" />
+                    <label class="form-check-label">No</label>
+                </div>
+                <span asp-validation-for="Form.Performed" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Form.HasProgram" /> @Html.DisplayNameFor(model => model.Form.HasProgram)
-                </label>
+
+            <div class="form-group">
+                <label class="control-label">@Html.DisplayNameFor(model => model.Form.HasProgram)</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Form.HasProgram" value="true" />
+                    <label class="form-check-label">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Form.HasProgram" value="false" />
+                    <label class="form-check-label">No</label>
+             </div>
+                <span asp-validation-for="Form.HasProgram" class="text-danger"></span>
             </div>
+            
             <div class="form-group">
                 <label asp-for="Form.OtherDescription" class="control-label"></label>
                 <input asp-for="Form.OtherDescription" class="form-control" />

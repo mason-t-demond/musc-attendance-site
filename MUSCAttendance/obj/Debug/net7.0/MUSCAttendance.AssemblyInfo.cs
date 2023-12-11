@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MUSCAttendance")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8febad08e7b08ab0228a0627b19257f976487cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2de8ed0fd18acc47327c6b89ee748f612a36bd34")]
 [assembly: System.Reflection.AssemblyProductAttribute("MUSCAttendance")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MUSCAttendance")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
