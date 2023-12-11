@@ -23,6 +23,7 @@ namespace MUSCAttendance.Pages.Forms
         public IList<Form> Form { get;set; } = default!;
         public string StudentId { get; set; }
         public Student Student {get;set;}
+        
 
 
 
@@ -33,10 +34,13 @@ namespace MUSCAttendance.Pages.Forms
 
         public async Task OnGetAsync(string studentId)
         {
+            IQueryable<Student> studentsIQ =  _context.Students
+            .Include(s => s.Forms)
+            .AsNoTracking();
             // If a student ID is provided, filter forms by that ID
             if (!string.IsNullOrEmpty(studentId))
             {
-                Student = await _context.Students
+                Student = await studentsIQ
                     .Where(s => s.StudentID.ToString() == studentId)
                     .FirstOrDefaultAsync();
                 
@@ -47,7 +51,7 @@ namespace MUSCAttendance.Pages.Forms
                 // If no student ID provided, retrieve all forms
                 Form = await _context.Forms.ToListAsync();
             }
-            
+
             HendrixCount = Form.Count(f => f.Type.ToString() == "Hendrix");
             UCACount = Form.Count(f => f.Type.ToString() == "UCA");
             OtherCount = Form.Count(f => f.Type.ToString() == "Other");
