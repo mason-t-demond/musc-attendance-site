@@ -23,6 +23,9 @@ $(document).ready(function () {
         } else {
             $('#programDescriptionGroup').hide();
         }
+        if (!$('#hasProgramNo').prop('checked')) {
+            $('#programDescriptionGroup').hide();
+        } 
     });
     
 });
