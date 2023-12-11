@@ -86,7 +86,7 @@
                 @if (!item.Approved)
                     {
                         <form method="post" asp-page-handler="Approve" asp-route-id="@item.ID">
-                            <button type="submit">Approve</button>
+                            <button type="submit"  class="btn btn-primary">Approve</button>
                         </form>
                     }
             </td>
