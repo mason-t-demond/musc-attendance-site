@@ -22,11 +22,14 @@
 
 
 <h4>Progress</h4>
+<meter>
+    @Html.DisplayFor(model => model.AttendanceProgress)
+</meter>
 <dl >
         <dt >
             Total Attendances
         </dt>
-        <dd >
+        <dd>
             @Html.DisplayFor(model => model.TotalAttendances)               
         </dd>
         <dt >

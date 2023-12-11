@@ -31,6 +31,8 @@ namespace MUSCAttendance.Pages.Forms
         public int OtherCount { get; set; }
         public int PerformedCount { get; set; }
 
+        public float AttendanceProgress { get; set; }
+
 
         public async Task OnGetAsync(string studentId)
         {
@@ -48,7 +50,7 @@ namespace MUSCAttendance.Pages.Forms
             {
                 // If no student ID provided, retrieve all forms
                 Form = await _context.Forms.ToListAsync();
-        }
+            }
 
 
             HendrixCount = Form.Count(f => f.Type.ToString() == "Hendrix");
@@ -59,5 +61,7 @@ namespace MUSCAttendance.Pages.Forms
 
             // Sum the counts
             TotalAttendances = HendrixCount + Math.Min(UCACount, 10) + Math.Min(OtherCount, 10);
+
+            AttendanceProgress = TotalAttendances / 35;
     }
 }}
