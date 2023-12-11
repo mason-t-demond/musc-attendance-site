@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using MUSCAttendance.Data;
 using MUSCAttendance.Models;
 
@@ -27,6 +28,10 @@ namespace MUSCAttendance.Pages.Forms
         [BindProperty]
         public Form Form { get; set; } = default!;
 
+        public string StudentId { get; set; }
+        public Student Student { get; set; }
+
+
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
@@ -35,7 +40,11 @@ namespace MUSCAttendance.Pages.Forms
                 return Page();
             }
 
-
+            Student = await _context.Students
+                    .Where(s => s.StudentID.ToString() == StudentId)
+                    .FirstOrDefaultAsync();
+            
+            Student.Forms.Add(Form);
             _context.Forms.Add(Form);
             await _context.SaveChangesAsync();
             
