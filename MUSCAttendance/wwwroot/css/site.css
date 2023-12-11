@@ -120,3 +120,10 @@ dd {
   border-color: rgb(62, 177, 200);
   box-shadow: rgb(62, 177, 200);
 }
+.form-control:focus {
+  color: #000000;
+  background-color: #fff;
+  border-color: rgb(62, 177, 200);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(62, 177, 200);
+}
