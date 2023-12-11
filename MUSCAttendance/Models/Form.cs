@@ -23,15 +23,18 @@ namespace MUSCAttendance.Models
         [Display(Name = "Event Location")]
         public EventType Type { get; set; }
 
+        [Display(Name = "Performed in Event")]
         public bool Performed { get; set; }
 
 
-        [Display(Name = "Program?")]
+        [Display(Name = "Event had Program")]
         public bool HasProgram { get; set; }
-
+        
+        [Display(Name = "Learning Goal Description")]
         public string? OtherDescription { get; set; }
 
 
+        [Display(Name = "Event Description")]
         public string? ProgramDescription { get; set; }
 
         public bool Approved { get; set; }
