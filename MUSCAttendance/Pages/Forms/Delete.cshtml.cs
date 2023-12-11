@@ -57,7 +57,7 @@ namespace MUSCAttendance.Pages.Forms
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("..Students/Details", form.Student.ID);
+            return RedirectToPage("./Index", form.Student.ID);
         }
     }
 }
