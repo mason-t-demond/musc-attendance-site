@@ -46,7 +46,7 @@ namespace MUSCAttendance.Pages.Students
             {
                 formToApprove.Approved = true;
                 _context.SaveChanges();
-                return RedirectToPage(new { formToApprove.Student.ID });
+                return Page();
             }
 
             return NotFound();
