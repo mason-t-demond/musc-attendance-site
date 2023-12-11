@@ -37,19 +37,5 @@ namespace MUSCAttendance.Pages.Students
 
             return Page();
         }
-
-        public async Task<IActionResult> OnPostAsync(int id)
-        {
-            
-            var formToApprove = await _context.Forms.FirstOrDefaultAsync(f => f.ID == id);
-
-            if (formToApprove != null)
-            {
-                formToApprove.Approved = true;
-                _context.SaveChanges();
-            }
-
-            return RedirectToPage("/Students/Details", new { id = Student.ID });
-        }
     }
 }
