@@ -36,7 +36,7 @@
                     <label class="form-check-label">UCA</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" asp-for="Form.Type" value="Other" />
+                    <input class="form-check-input" type="radio" asp-for="Form.Type" value="Other" id="otherRadio"/>
                     <label class="form-check-label">Other</label>
                 </div>
                 <span asp-validation-for="Form.Type" class="text-danger"></span>
@@ -95,22 +95,29 @@
 
 <script>
     $(document).ready(function () {
-        $('#eventType').change(function () {
-            if ($(this).val() === 'Other') {
-                $('#otherDescriptionGroup').show();
+        $("#otherDescriptionGroup").hide();
+        $('#programDescriptionGroup').hide();
+
+
+        // Handle radio button change event
+        $("input[name='Form.Type']").change(function () {
+            if ($(this).val() === "Other") {
+                // If "Other" is selected, show the OtherDescription input
+                $("#otherDescriptionGroup").show();
             } else {
-                $('#otherDescriptionGroup').hide();
+                // If a different option is selected, hide the OtherDescription input
+                $("#otherDescriptionGroup").hide();
             }
         });
 
-        $('#hasProgramYes, #hasProgramNo').change(function () {
+        $('#hasProgramNo').change(function () {
             // Check if the "Yes" radio button is selected
-            if ($('#hasProgramYes').prop('checked')) {
+            if ($('#hasProgramNo').prop('checked')) {
                 // If selected, hide the ProgramDescription field
-                $('#programDescriptionGroup').hide();
+                $('#programDescriptionGroup').show();
             } else {
                 // If "No" is selected, show the ProgramDescription field
-                $('#programDescriptionGroup').show();
+                $('#programDescriptionGroup').hide();
             }
         });
         
