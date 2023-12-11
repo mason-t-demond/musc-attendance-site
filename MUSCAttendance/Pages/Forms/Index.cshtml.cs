@@ -25,6 +25,13 @@ namespace MUSCAttendance.Pages.Forms
         public Student Student {get;set;}
 
 
+        public int TotalAttendances { get; set; }
+        public int HendrixCount { get; set; }
+        public int UCACount { get; set; }
+        public int OtherCount { get; set; }
+        public int PerformedCount { get; set; }
+
+
         public async Task OnGetAsync(string studentId)
         {
             // If a student ID is provided, filter forms by that ID
@@ -42,5 +49,17 @@ namespace MUSCAttendance.Pages.Forms
                 // If no student ID provided, retrieve all forms
                 Form = await _context.Forms.ToListAsync();
         }
+
+
+            HendrixCount = Form.Count(f => f.Type.ToString() == "Hendrix");
+            UCACount = Form.Count(f => f.Type.ToString() == "UCA");
+            OtherCount = Form.Count(f => f.Type.ToString() == "Other");
+
+            // Only count up to 10 forms where Performed is true
+            PerformedCount = Form.Count(f => f.Performed);
+
+
+            // Sum the counts
+            TotalAttendances = HendrixCount + Math.Min(UCACount, 10) + Math.Min(OtherCount, 10) + PerformedCount;
     }
 }}
