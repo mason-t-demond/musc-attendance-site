@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MUSCAttendance.Migrations
 {
     /// <inheritdoc />
-    public partial class ReInitialCreate : Migration
+    public partial class AddedProgramUrl : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -183,6 +183,7 @@ namespace MUSCAttendance.Migrations
                     Type = table.Column<int>(type: "INTEGER", nullable: false),
                     Performed = table.Column<bool>(type: "INTEGER", nullable: false),
                     HasProgram = table.Column<bool>(type: "INTEGER", nullable: false),
+                    ProgramPhotoUrl = table.Column<string>(type: "TEXT", nullable: true),
                     OtherDescription = table.Column<string>(type: "TEXT", nullable: true),
                     ProgramDescription = table.Column<string>(type: "TEXT", nullable: true),
                     Approved = table.Column<bool>(type: "INTEGER", nullable: false)

@@ -69,6 +69,7 @@
             <th>@Html.DisplayNameFor(model => model.Form[0].Performed)</th>
             <th>@Html.DisplayNameFor(model => model.Form[0].HasProgram)</th>
             <th>@Html.DisplayNameFor(model => model.Form[0].OtherDescription)</th>
+            <th>@Html.DisplayNameFor(model => model.Form[0].ProgramPhotoUrl)</th>
             <th>@Html.DisplayNameFor(model => model.Form[0].ProgramDescription)</th>
             <th>@Html.DisplayNameFor(model => model.Form[0].Approved)</th>
         </tr>
@@ -91,6 +92,9 @@
              <td>
                 @Html.DisplayFor(modelItem => item.OtherDescription)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProgramPhotoUrl)
+            </td> 
             <td>
                 @Html.DisplayFor(modelItem => item.ProgramDescription)
             </td> 

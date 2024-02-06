@@ -67,9 +67,9 @@
             </div>
 
             <div class="form-group" id="programPhotoGroup">
-                <label class="control-label">Photo of Printed Program (Imgur Link).</label>
-                <input class="form-control" />
-                <span class="text-danger"></span>
+                <label asp-for="Form.ProgramPhotoUrl" class="control-label">Photo of Printed Program (Imgur Link).</label>
+                <input asp-for="Form.ProgramPhotoUrl" class="form-control" />
+                <span asp-validation-for="Form.ProgramPhotoUrl" class="text-danger"></span>
             </div>
 
             <div class="form-group" id="programDescriptionGroup">

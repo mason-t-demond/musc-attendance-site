@@ -29,6 +29,9 @@ namespace MUSCAttendance.Models
 
         [Display(Name = "Event had Program")]
         public bool HasProgram { get; set; }
+
+        [Display(Name = "Program URL")]
+        public string? ProgramPhotoUrl { get; set; }
         
         [Display(Name = "Learning Goal Description")]
         public string? OtherDescription { get; set; }

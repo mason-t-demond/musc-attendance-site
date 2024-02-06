@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MUSCAttendance.Migrations
 {
     [DbContext(typeof(SchoolContext))]
-    [Migration("20240205094619_ReInitialCreate")]
-    partial class ReInitialCreate
+    [Migration("20240206074607_AddedProgramUrl")]
+    partial class AddedProgramUrl
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,6 +42,9 @@ namespace MUSCAttendance.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ProgramDescription")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ProgramPhotoUrl")
                         .HasColumnType("TEXT");
 
                     b.Property<int?>("StudentID")

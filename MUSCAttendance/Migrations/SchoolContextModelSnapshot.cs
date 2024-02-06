@@ -41,6 +41,9 @@ namespace MUSCAttendance.Migrations
                     b.Property<string>("ProgramDescription")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ProgramPhotoUrl")
+                        .HasColumnType("TEXT");
+
                     b.Property<int?>("StudentID")
                         .HasColumnType("INTEGER");
 
