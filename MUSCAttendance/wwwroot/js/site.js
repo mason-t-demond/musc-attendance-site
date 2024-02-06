@@ -5,29 +5,26 @@
 
 $(document).ready(function () {
     $("#otherDescriptionGroup").hide();
-    $('#programDescriptionGroup').hide();
-
+    $("#programPhotoGroup").hide();
+    $('#programDescriptionGroup').show();
 
     // Handle radio button change event
     $("input[name='Form.Type']").change(function () {
-        if ($(this).val() === "Other") {
+        if ($(this).val() == "Other") {
             $("#otherDescriptionGroup").show();
         } else {
             $("#otherDescriptionGroup").hide();
         }
     });
 
-    $('#hasProgramNo').change(function () {
-        if ($('#hasProgramNo').prop('checked')) {
-            $('#programDescriptionGroup').show();
+    $('#hasProgram').change(function () {
+        var checkbox = document.getElementById("hasProgram")
+        if (checkbox.checked) {
+            $('#programPhotoGroup').show();
+            $('#programDescriptionGroup').hide();
         } else {
-            $('#programDescriptionGroup').hide();
+            $('#programPhotoGroup').hide();
+            $('#programDescriptionGroup').show();
         }
-        if (!$('#hasProgramNo').prop('checked')) {
-            $('#programDescriptionGroup').hide();
-        } 
     });
-    
-
-    
 });
